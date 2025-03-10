@@ -3551,6 +3551,7 @@ sources/0 = SubResource("TileSetAtlasSource_01iwd")
 
 [node name="player" parent="." instance=ExtResource("2_o7127")]
 position = Vector2(217, 244)
+jump_speed = 1000.0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
