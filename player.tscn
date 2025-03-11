@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3 uid="uid://def6vryd8p2g3"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_sfxdo"]
+[ext_resource type="Script" path="res://personaje_prueba.gd" id="1_al4ft"]
 [ext_resource type="Texture2D" uid="uid://byjb1hmtfbwdx" path="res://character.png" id="1_wmb5g"]
 [ext_resource type="Texture2D" uid="uid://co61g7ph3r7yk" path="res://Spritesheet.png" id="3_ig1gy"]
 
@@ -196,13 +196,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pin8"]
-size = Vector2(39, 128)
+size = Vector2(39, 145)
 
 [node name="player" type="CharacterBody2D"]
-position = Vector2(87, 231)
-script = ExtResource("1_sfxdo")
-move_speed = 200.0
-jump_speed = 500.0
+position = Vector2(33, 320)
+script = ExtResource("1_al4ft")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -213,5 +211,7 @@ animation = &"idle"
 frame_progress = 0.263121
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -5)
+position = Vector2(0.5, 3.5)
 shape = SubResource("RectangleShape2D_6pin8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
