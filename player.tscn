@@ -201,6 +201,7 @@ size = Vector2(39, 145)
 [node name="player" type="CharacterBody2D"]
 position = Vector2(33, 320)
 script = ExtResource("1_al4ft")
+jump_speed = 900
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

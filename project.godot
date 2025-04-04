@@ -15,6 +15,14 @@ run/main_scene="res://node_2d.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg")
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

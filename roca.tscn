@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cob3pr6wjldka"]
+
+[ext_resource type="Script" path="res://enemigo_2.gd" id="1_4afa7"]
+[ext_resource type="Texture2D" uid="uid://dmhdx5cu637it" path="res://pngtree-rock-png-image_17274803.png" id="1_06vuo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6b2we"]
+radius = 56.4358
+
+[node name="RigidBody2D" type="RigidBody2D"]
+collision_layer = 7
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_4afa7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.00003, 4.00002)
+scale = Vector2(0.056, 0.056)
+texture = ExtResource("1_06vuo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+physics_interpolation_mode = 1
+top_level = true
+light_mask = 7
+visibility_layer = 7
+position = Vector2(3, 6)
+shape = SubResource("CircleShape2D_6b2we")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

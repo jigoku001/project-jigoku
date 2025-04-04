@@ -1,9 +1,9 @@
-class_name Prueba
+class_name Player
 extends CharacterBody2D
 
-@export var gravity = 100
-@export var jump_speed = 100
-@export var speed = 100
+@export var gravity = 980
+@export var jump_speed = 300
+@export var speed = 300
 @onready var sprite:Sprite2D
 
 
