@@ -2008,6 +2008,6 @@ texture = ExtResource("56_gwe2h")
 
 [node name="player" parent="." instance=ExtResource("91_8w8bm")]
 visibility_layer = 3
-position = Vector2(22, 521)
+z_index = 5
+position = Vector2(22, 519)
 scale = Vector2(0.24161, 0.168591)
-jump_speed = 250.0
