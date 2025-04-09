@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divierte_JIGOKU</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="link" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">JIGOKU</div>
+            <ul class="nav-links">
+                <li><a href="formulario.html" target="_blank">Registrate</a></li>
+                <li><a href="Galeria" target="Galeria">Galeria</a></li>
+                <li><a href="Contacto" target="Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <section class="hero">
+            <h1>Explora el Universo de Jigoku.</h1>
+            <p>Descubre el contenido de nuestro juego</p>
+            <a href="#" class="btn" id="heroBtn">Comienza ahora</a>
+        </section>
+        
+        <div class="card-container">
+            <div class="card">
+                <div class="card-img">
+                    <img src="IMAGEN PDTE" alt="Galaxia">
+                </div>
+                <div class="card-content">
+                    <h3>Galería Jigoku</h3>
+                    <p>Imágenes asombrosas del universo de JIGOKU</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="IMAGEN PDTE" alt="Tecnología">
+                </div>
+                <div class="card-content">
+                    <h3>Videos Exclusivos</h3>
+                    <p>Contenido multimedia único sobre tecnología y ciencia</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="IMAGEN PDTE" alt="Abstracto">
+                </div>
+                <div class="card-content">
+                    <h3>Arte Digital</h3>
+                    <p>Colección de obras de arte con temática futurista</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-container" id="loginForm" style="display: none;">
+            <h2>Iniciar Sesión</h2>
+            <form id="authForm">
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                
+                <button type="submit" class="btn">Iniciar sesión</button>
+                <button type="button" class="btn google-btn" id="googleLogin">
+                    <img src="IMAGEN PDTE" alt="Google">
+                    Continuar con Google
+                </button>
+            </form>
+            
+            <div class="form-footer">
+                <p>¿No tienes cuenta? <a href="#" id="registerLink">Regístrate aquí</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Jigoku. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
