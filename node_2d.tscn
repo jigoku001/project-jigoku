@@ -3551,10 +3551,6 @@ sources/0 = SubResource("TileSetAtlasSource_01iwd")
 
 [node name="limbo" type="Node2D"]
 
-[node name="player" parent="." instance=ExtResource("2_o7127")]
-position = Vector2(217, 244)
-jump_speed = 660.0
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
@@ -3579,7 +3575,10 @@ tile_map_data = PackedByteArray("AAAAAB0AAAAHADUAAAAAAB4AAAAHADYAAAAAAB8AAAAHADc
 tile_set = SubResource("TileSet_6bf2b")
 
 [node name="RigidBody2D" parent="." instance=ExtResource("7_a18qu")]
-position = Vector2(205, -221)
+position = Vector2(380, -192)
+script = null
 
 [node name="Area2D" parent="." instance=ExtResource("8_prr46")]
 position = Vector2(1361, 146)
+
+[node name="player" parent="." instance=ExtResource("2_o7127")]
