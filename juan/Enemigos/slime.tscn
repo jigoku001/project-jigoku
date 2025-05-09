@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://dcgyamyaydo0r"]
+
+[ext_resource type="Texture2D" uid="uid://b7aq8pk2ypsjd" path="res://juan/Enemigos/trampas.png" id="1_42uyk"]
+
+[sub_resource type="GDScript" id="GDScript_eeisy"]
+script/source = "extends CharacterBody2D
+
+const SlimeJump = 150
+func _ready(): 
+	velocity.y = -SlimeJump
+	$AnimatedSprite2D.play(\"run\")
+
+func _physics_process(delta):
+	
+	if is_on_ceiling():
+		if !$AnimatedSprite2D.flip_h:
+			velocity.y = SlimeJump
+		else:
+			velocity.y = -SlimeJump
+			
+	if velocity.y < 0:
+		$AnimatedSprite2D.flip_h = false
+	elif velocity.y > 0:
+		$AnimatedSprite2D.flip_h = true
+		
+	if is_on_floor():
+		if !$AnimatedSprite2D.flip_h:
+			velocity.y = SlimeJump
+		else:
+			velocity.y = -SlimeJump
+			
+	if velocity.y < 0:
+		$AnimatedSprite2D.flip_h = false
+	elif velocity.y > 0:
+		$AnimatedSprite2D.flip_h = true
+	
+	
+	move_and_slide()
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpfq7"]
+atlas = ExtResource("1_42uyk")
+region = Rect2(53, 0, 50, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dlog1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpfq7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7i5m"]
+size = Vector2(32, 33)
+
+[node name="Slime" type="CharacterBody2D"]
+script = SubResource("GDScript_eeisy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -5)
+sprite_frames = SubResource("SpriteFrames_dlog1")
+frame_progress = 0.603281
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p7i5m")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="RayCast2D2" type="RayCast2D" parent="Node2D"]
+target_position = Vector2(0, 60)
+
+[node name="RayCast2D" type="RayCast2D" parent="Node2D"]
+target_position = Vector2(0, -60)
