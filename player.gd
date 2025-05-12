@@ -40,5 +40,13 @@ func update_animation():
 		animated_sprite.play("caminar")
 	else:
 		animated_sprite.play("idle")
-	
-	
+func _process(delta):
+	if position.y > 1000:
+		die()
+func _on_Hurtbox_body_entered(body):
+	if body.is_in_group("Peligro"):
+		die()
+func die():
+	get_tree().reload_current_scene()
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
