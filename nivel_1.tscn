@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://ckwkkmmqk44d2"]
+[gd_scene load_steps=28 format=3 uid="uid://ckwkkmmqk44d2"]
 
 [ext_resource type="Script" uid="uid://doyv04xvwptci" path="res://juan/Niveles/camera_2d.gd" id="1_50uyw"]
+[ext_resource type="Script" uid="uid://yiul6oh82m8o" path="res://pua_muerte.gd" id="1_fnctx"]
 [ext_resource type="Texture2D" uid="uid://q28x8svbai38" path="res://juan/sripte 6 fase.png" id="2_fnctx"]
 [ext_resource type="PackedScene" uid="uid://def6vryd8p2g3" path="res://player.tscn" id="2_lpuds"]
 [ext_resource type="Texture2D" uid="uid://d8hsb7r3uiqo" path="res://juan/Sprite level 2fas e1.png" id="3_1t0n7"]
@@ -14,6 +15,18 @@
 [ext_resource type="Texture2D" uid="uid://c318tbrf5abpw" path="res://juan/Background/Estrellas.png" id="11_ig26m"]
 [ext_resource type="PackedScene" uid="uid://dcgyamyaydo0r" path="res://juan/Enemigos/slime.tscn" id="12_5jqlr"]
 [ext_resource type="PackedScene" uid="uid://cgnpyu72rjg1l" path="res://juan/Enemigos/character_body_2d.tscn" id="13_bjuv0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1t0n7"]
+size = Vector2(48.0904, 71.4346)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnctx"]
+size = Vector2(33, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3im4l"]
+size = Vector2(48, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2n6wq"]
+size = Vector2(48, 28.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vpmd6"]
 texture = ExtResource("2_fnctx")
@@ -561,6 +574,51 @@ texture = ExtResource("6_7h30g")
 17:9/0 = 0
 18:9/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3im4l"]
+texture = ExtResource("5_2n6wq")
+7:0/0 = 0
+7:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_oh3yo"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vpmd6")
@@ -568,11 +626,39 @@ sources/1 = SubResource("TileSetAtlasSource_0ab30")
 sources/2 = SubResource("TileSetAtlasSource_6hnu1")
 sources/3 = SubResource("TileSetAtlasSource_0167c")
 sources/4 = SubResource("TileSetAtlasSource_742p0")
+sources/5 = SubResource("TileSetAtlasSource_3im4l")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_50uyw"]
 size = Vector2(35.7143, 32.8571)
 
-[node name="Nivel 1" type="Node2D"]
+[node name="Nivel1" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="." groups=["Peligro"]]
+script = ExtResource("1_fnctx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1285, -72.1964)
+scale = Vector2(1.03971, 0.621446)
+shape = SubResource("RectangleShape2D_1t0n7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1147, 43)
+shape = SubResource("RectangleShape2D_fnctx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+top_level = true
+position = Vector2(2727, 641)
+shape = SubResource("RectangleShape2D_3im4l")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+top_level = true
+position = Vector2(2909, 639)
+shape = SubResource("RectangleShape2D_3im4l")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
+top_level = true
+position = Vector2(3896, 696.25)
+shape = SubResource("RectangleShape2D_2n6wq")
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("object_to_follow")]
 zoom = Vector2(4.5, 4.5)
@@ -664,7 +750,9 @@ position = Vector2(1476, -66)
 position = Vector2(1812, 322)
 
 [node name="player" parent="." instance=ExtResource("2_lpuds")]
-position = Vector2(-18, -3)
+position = Vector2(-21, 3)
 scale = Vector2(0.279999, 0.119999)
 move_speed = 150.0
 jump_speed = 300.0
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
