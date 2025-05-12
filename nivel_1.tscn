@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ckwkkmmqk44d2"]
+[gd_scene load_steps=22 format=3 uid="uid://ckwkkmmqk44d2"]
 
 [ext_resource type="Script" uid="uid://doyv04xvwptci" path="res://juan/Niveles/camera_2d.gd" id="1_50uyw"]
 [ext_resource type="Texture2D" uid="uid://q28x8svbai38" path="res://juan/sripte 6 fase.png" id="2_fnctx"]
@@ -569,6 +569,9 @@ sources/2 = SubResource("TileSetAtlasSource_6hnu1")
 sources/3 = SubResource("TileSetAtlasSource_0167c")
 sources/4 = SubResource("TileSetAtlasSource_742p0")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_50uyw"]
+size = Vector2(35.7143, 32.8571)
+
 [node name="Nivel 1" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("object_to_follow")]
@@ -645,6 +648,12 @@ texture = ExtResource("11_ig26m")
 position = Vector2(129, 0)
 scale = Vector2(0.7, 0.7)
 
+[node name="Hurtbox2" type="Area2D" parent="Slime"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slime/Hurtbox2"]
+position = Vector2(4.29153e-06, -4.76837e-07)
+shape = SubResource("RectangleShape2D_50uyw")
+
 [node name="Slime2" parent="." instance=ExtResource("12_5jqlr")]
 position = Vector2(1510, -63)
 
@@ -655,7 +664,7 @@ position = Vector2(1476, -66)
 position = Vector2(1812, 322)
 
 [node name="player" parent="." instance=ExtResource("2_lpuds")]
-position = Vector2(-18, 1.00001)
+position = Vector2(-18, -3)
 scale = Vector2(0.279999, 0.119999)
 move_speed = 150.0
 jump_speed = 300.0
