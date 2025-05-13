@@ -17,10 +17,10 @@
 [ext_resource type="PackedScene" uid="uid://cgnpyu72rjg1l" path="res://juan/Enemigos/character_body_2d.tscn" id="13_bjuv0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1t0n7"]
-size = Vector2(29.816, 49.8837)
+size = Vector2(49.0522, 56.3203)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnctx"]
-size = Vector2(33, 36)
+size = Vector2(41.5, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3im4l"]
 size = Vector2(49, 45.5)
@@ -641,12 +641,12 @@ top_level = true
 script = ExtResource("1_fnctx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1283.5, -63.5)
+position = Vector2(1284.5, -67.5)
 scale = Vector2(1.03971, 0.621446)
 shape = SubResource("RectangleShape2D_1t0n7")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1147, 43)
+position = Vector2(1157.25, 44)
 shape = SubResource("RectangleShape2D_fnctx")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
