@@ -54,7 +54,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_qpfq7")
 }],
 "loop": true,
-"name": &"default",
+"name": &"run",
 "speed": 5.0
 }]
 
@@ -70,7 +70,12 @@ script = SubResource("GDScript_eeisy")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2, -5)
 sprite_frames = SubResource("SpriteFrames_dlog1")
-frame_progress = 0.603281
+animation = &"run"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+position = Vector2(-2, -5)
+sprite_frames = SubResource("SpriteFrames_dlog1")
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_p7i5m")
