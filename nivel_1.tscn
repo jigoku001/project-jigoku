@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cgnpyu72rjg1l" path="res://juan/Enemigos/character_body_2d.tscn" id="13_bjuv0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1t0n7"]
-size = Vector2(49.0522, 56.3203)
+size = Vector2(37.5104, 56.3203)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnctx"]
 size = Vector2(41.5, 36)
@@ -641,7 +641,7 @@ top_level = true
 script = ExtResource("1_fnctx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1284.5, -67.5)
+position = Vector2(1281, -65)
 scale = Vector2(1.03971, 0.621446)
 shape = SubResource("RectangleShape2D_1t0n7")
 
@@ -754,13 +754,13 @@ position = Vector2(1476, -66)
 position = Vector2(1812, 322)
 
 [node name="player" parent="." instance=ExtResource("2_lpuds")]
-position = Vector2(-37, -12)
+position = Vector2(2045, 304)
 scale = Vector2(0.279999, 0.119999)
 move_speed = 150.0
 jump_speed = 380.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(1733, 332)
+position = Vector2(1693, 330)
 disable_mode = 2
 input_pickable = true
 
