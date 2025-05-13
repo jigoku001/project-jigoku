@@ -6,7 +6,7 @@ func _ready():
 	velocity.y = -Goblo
 	$AnimatedSprite2D.play("run")
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	if is_on_ceiling():
 		if !$AnimatedSprite2D.flip_h:
