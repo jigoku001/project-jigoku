@@ -17,7 +17,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_atfsq")
 }],
 "loop": true,
-"name": &"default",
+"name": &"run",
 "speed": 5.0
 }]
 
@@ -36,6 +36,7 @@ shape = SubResource("RectangleShape2D_03swy")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-5, 0)
 sprite_frames = SubResource("SpriteFrames_6dnpk")
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_tkc7w")
