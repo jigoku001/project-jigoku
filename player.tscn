@@ -5,9 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dg0clyljgi7yf" path="res://character/Spritesheet.png" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6pin8"]
-size = Vector2(39, 145)
+size = Vector2(23, 145)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+size = Vector2(21.7347, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pas5w"]
 atlas = ExtResource("2_lg5gr")
@@ -249,12 +250,11 @@ jump_speed = 500.0
 position = Vector2(-1, 9.99997)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-visible = false
-position = Vector2(1, 14)
+position = Vector2(-1.5, 6.00003)
 shape = SubResource("RectangleShape2D_6pin8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 17)
+position = Vector2(-2.7, 17)
 scale = Vector2(1.96, 7.52)
 shape = SubResource("RectangleShape2D_i3pqv")
 
