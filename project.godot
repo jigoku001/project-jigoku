@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/bg_color=Color(0.241194, 0.0392072, 0.212422, 1)
 boot_splash/image="uid://b8vbn0m3wx343"
 config/icon="res://icon.svg"
-boot_splash/minimum_display_time=2000
+boot_splash/minimum_display_time=4000
 
 [global_group]
 
