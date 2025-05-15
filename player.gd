@@ -31,14 +31,22 @@ func jump(delta):
 func update_animation():
 	if not is_on_floor():
 		if velocity.y < 0:
-			animated_sprite.play("saltar")
+			animated_sprite.play("idle")
 		else: 
-			animated_sprite.play("caer")
+			animated_sprite.play("idle")
 		return
 		 
 	if velocity.x:
 		animated_sprite.play("caminar")
 	else:
 		animated_sprite.play("idle")
-	
-	
+func _process(_delta):
+	if position.y > 1200:
+		die()
+func _on_Hurtbox_body_entered(body):
+	if body.is_in_group("Peligro"):
+		body.call_deferred("die")
+func die():
+	get_tree().reload_current_scene()
+#func _on_area_2d_body_entered(body: Node2D) -> void:
+	#ass # Replace with function body.

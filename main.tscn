@@ -1,0 +1,112 @@
+[gd_scene load_steps=15 format=3 uid="uid://bdo5odydptyqb"]
+
+[ext_resource type="Texture2D" uid="uid://eslt3altm61a" path="res://tileset/fondo.png" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://bwue16qbvmnbw" path="res://tileset/interface/botones2.svg" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://cff7civ0m74yt" path="res://texture_button.gd" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://b02vq84dayvdd" path="res://cerrar.gd" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://duka1mv1wlhms" path="res://tileset/pixel_art_resized_1920x1080.png" id="5_lquwl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bvp3"]
+atlas = ExtResource("2_h2yge")
+region = Rect2(508.721, 34.9992, 431.534, 93.2114)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
+atlas = ExtResource("2_h2yge")
+region = Rect2(38.3355, 39.9568, 431.617, 84.8016)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mycd"]
+atlas = ExtResource("2_h2yge")
+region = Rect2(943.403, 41.3135, 430.988, 82.405)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
+atlas = ExtResource("2_h2yge")
+region = Rect2(590.789, 378.646, 256.781, 85.5935)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_272bh"]
+atlas = ExtResource("2_h2yge")
+region = Rect2(114.905, 374.221, 273.899, 91.2998)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vw27"]
+atlas = ExtResource("2_h2yge")
+region = Rect2(1025.05, 377.074, 268.193, 91.2998)
+
+[sub_resource type="Animation" id="Animation_272bh"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_7mycd"]
+resource_name = "inicio"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.0612, 2),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5vw27"]
+_data = {
+&"RESET": SubResource("Animation_272bh"),
+&"inicio": SubResource("Animation_7mycd")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(589, 343)
+scale = Vector2(3.00496, 3.46269)
+texture = ExtResource("1_0xm2m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -211.0
+offset_top = 245.0
+offset_right = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_1bvp3")
+texture_pressed = SubResource("AtlasTexture_lquwl")
+texture_hover = SubResource("AtlasTexture_7mycd")
+script = ExtResource("3_h2yge")
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_h2yge")
+texture_pressed = SubResource("AtlasTexture_272bh")
+texture_hover = SubResource("AtlasTexture_5vw27")
+stretch_mode = 3
+script = ExtResource("4_1bvp3")
+
+[node name="PixelArtResized1920x1080" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(589, 329.25)
+scale = Vector2(0.668229, 0.672685)
+texture = ExtResource("5_lquwl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PixelArtResized1920x1080"]
+libraries = {
+&"": SubResource("AnimationLibrary_5vw27")
+}
+
+[connection signal="pressed" from="VBoxContainer/TextureButton" to="VBoxContainer/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/TextureButton2" to="VBoxContainer/TextureButton2" method="_on_pressed"]
+[connection signal="animation_finished" from="PixelArtResized1920x1080/AnimationPlayer" to="VBoxContainer/TextureButton" method="_on_animation_player_animation_finished"]
