@@ -1,4 +1,4 @@
-[gd_scene load_steps=191 format=4 uid="uid://cshgcj8l2uqw6"]
+[gd_scene load_steps=190 format=4 uid="uid://cshgcj8l2uqw6"]
 
 [ext_resource type="Texture2D" uid="uid://dvchxpdd00ldg" path="res://tileset/Tiles dungeon/PNG/Tiles_rock/tile1.png" id="1_yhlcl"]
 [ext_resource type="Texture2D" uid="uid://bf8muoje5h7wx" path="res://tileset/Tiles dungeon/PNG/Tiles_rock/tile2.png" id="2_lva5i"]
@@ -91,7 +91,6 @@
 [ext_resource type="Texture2D" uid="uid://b0d6r508aru82" path="res://tileset/Tiles dungeon/PNG/Details/stalagmite3.png" id="88_ybqk2"]
 [ext_resource type="Texture2D" uid="uid://c5gqvpwk16388" path="res://tileset/Tiles dungeon/PNG/Details/stalagmite4.png" id="89_d2l51"]
 [ext_resource type="PackedScene" uid="uid://def6vryd8p2g3" path="res://player.tscn" id="91_8w8bm"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="93_cp6wl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fmy2v"]
 texture = ExtResource("1_yhlcl")
@@ -2054,5 +2053,5 @@ visibility_layer = 3
 z_index = 5
 position = Vector2(38, 518)
 scale = Vector2(0.281609, 0.128616)
-script = ExtResource("93_cp6wl")
 move_speed = 200.0
+jump_speed = 300.0

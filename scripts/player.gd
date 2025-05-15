@@ -31,9 +31,9 @@ func jump(delta):
 func update_animation():
 	if not is_on_floor():
 		if velocity.y < 0:
-			animated_sprite.play("saltar")
+			animated_sprite.play("idle")
 		else: 
-			animated_sprite.play("caer")
+			animated_sprite.play("idle")
 		return
 		 
 	if velocity.x:
