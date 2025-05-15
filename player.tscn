@@ -1,8 +1,18 @@
-[gd_scene load_steps=37 format=3 uid="uid://def6vryd8p2g3"]
+[gd_scene load_steps=38 format=3 uid="uid://def6vryd8p2g3"]
 
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_gj6eg"]
+=======
+[ext_resource type="Script" uid="uid://c6oaehw4femjt" path="res://player.gd" id="1_om62o"]
+>>>>>>> ce36592b0583294b713524995723cb261ea6cc46
 [ext_resource type="Texture2D" uid="uid://b0stmcvds34os" path="res://character/caminata.png" id="2_lg5gr"]
 [ext_resource type="Texture2D" uid="uid://dg0clyljgi7yf" path="res://character/Spritesheet.png" id="2_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pin8"]
+size = Vector2(23, 145)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+size = Vector2(11.2245, 19.1489)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pas5w"]
 atlas = ExtResource("2_lg5gr")
@@ -234,12 +244,27 @@ animations = [{
 "speed": 22.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pin8"]
-size = Vector2(39, 145)
-
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(33, 320)
+<<<<<<< HEAD
 script = ExtResource("1_gj6eg")
+=======
+script = ExtResource("1_om62o")
+move_speed = 300.0
+jump_speed = 200.0
+
+[node name="Hurtbox" type="Area2D" parent="." groups=["Player"]]
+position = Vector2(-1, 9.99997)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-1.5, 6.00003)
+shape = SubResource("RectangleShape2D_6pin8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 17)
+scale = Vector2(1.96, 7.52)
+shape = SubResource("RectangleShape2D_i3pqv")
+>>>>>>> ce36592b0583294b713524995723cb261ea6cc46
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -247,9 +272,8 @@ position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_xtg8c")
 animation = &"caminar"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 3.5)
-shape = SubResource("RectangleShape2D_6pin8")
-
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, 1)
 zoom = Vector2(2, 2)
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_Hurtbox_body_entered"]

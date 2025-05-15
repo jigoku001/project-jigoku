@@ -1,7 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://50f4yqppt2ek"]
 
-[ext_resource type="Texture2D" uid="uid://brg6jhur1fr07" path="res://calaveras.jpg" id="1_awrv5"]
-[ext_resource type="Texture2D" uid="uid://b6ylnvwkqngl1" path="res://Attack.png" id="2_7ty1c"]
+[sub_resource type="Resource" id="Resource_0jah6"]
+metadata/__load_path__ = "res://calaveras.jpg"
+
+[sub_resource type="Resource" id="Resource_ht70u"]
+metadata/__load_path__ = "res://Attack.png"
 
 [node name="Node2D" type="Node2D"]
 
@@ -13,13 +16,13 @@
 texture_filter = 1
 position = Vector2(577, 321)
 scale = Vector2(0.778741, 0.759012)
-texture = ExtResource("1_awrv5")
+texture = SubResource("Resource_0jah6")
 
 [node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/CharacterBody2D"]
 texture_filter = 1
 position = Vector2(362, 177)
 scale = Vector2(1.89383, 2.58008)
-texture = ExtResource("2_7ty1c")
+texture = SubResource("Resource_ht70u")
 hframes = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/CharacterBody2D/Sprite2D2"]

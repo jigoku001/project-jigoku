@@ -91,6 +91,10 @@
 [ext_resource type="Texture2D" uid="uid://b0d6r508aru82" path="res://tileset/Tiles dungeon/PNG/Details/stalagmite3.png" id="88_ybqk2"]
 [ext_resource type="Texture2D" uid="uid://c5gqvpwk16388" path="res://tileset/Tiles dungeon/PNG/Details/stalagmite4.png" id="89_d2l51"]
 [ext_resource type="PackedScene" uid="uid://def6vryd8p2g3" path="res://player.tscn" id="91_8w8bm"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Script" uid="uid://bmaufu67g15tq" path="res://scripts/player.gd" id="93_cp6wl"]
+>>>>>>> ce36592b0583294b713524995723cb261ea6cc46
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fmy2v"]
 texture = ExtResource("1_yhlcl")
