@@ -1,9 +1,12 @@
-[gd_scene load_steps=29 format=3 uid="uid://ckwkkmmqk44d2"]
+[gd_scene load_steps=30 format=3 uid="uid://ckwkkmmqk44d2"]
 
 [ext_resource type="Script" path="res://juan/Niveles/camera_2d.gd" id="1_50uyw"]
 [ext_resource type="Script" path="res://pua_muerte.gd" id="1_fnctx"]
 [ext_resource type="Texture2D" uid="uid://q28x8svbai38" path="res://juan/sripte 6 fase.png" id="2_fnctx"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://c74tddmk0x8tw" path="res://player.tscn" id="2_lpuds"]
+=======
+>>>>>>> b15fa688a7a959fb2df213796536750a8f9d6995
 [ext_resource type="Texture2D" uid="uid://d8hsb7r3uiqo" path="res://juan/Sprite level 2fas e1.png" id="3_1t0n7"]
 [ext_resource type="Texture2D" uid="uid://d2knuvlp70872" path="res://juan/level tres.png" id="4_3im4l"]
 [ext_resource type="Texture2D" uid="uid://lete80p30ne3" path="res://juan/Sprite-0001.png" id="5_2n6wq"]
@@ -15,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://c318tbrf5abpw" path="res://juan/Background/Estrellas.png" id="11_ig26m"]
 [ext_resource type="PackedScene" uid="uid://dcgyamyaydo0r" path="res://juan/Enemigos/slime.tscn" id="12_5jqlr"]
 [ext_resource type="PackedScene" uid="uid://cgnpyu72rjg1l" path="res://juan/Enemigos/character_body_2d.tscn" id="13_bjuv0"]
+[ext_resource type="Script" uid="uid://c6oaehw4femjt" path="res://player.gd" id="15_fnctx"]
+[ext_resource type="PackedScene" uid="uid://dykxmg7wtubfw" path="res://player.tscn" id="16_1t0n7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1t0n7"]
 size = Vector2(37.5104, 56.3203)
@@ -752,12 +757,18 @@ position = Vector2(1476, -66)
 
 [node name="Goblo2" parent="." instance=ExtResource("13_bjuv0")]
 position = Vector2(1812, 322)
+<<<<<<< HEAD
 
 [node name="player" parent="." instance=ExtResource("2_lpuds")]
 position = Vector2(-22, -1)
 scale = Vector2(0.234443, 0.131531)
 move_speed = 150.0
 jump_speed = 300.0
+=======
+script = ExtResource("15_fnctx")
+move_speed = 0.0
+jump_speed = 0.0
+>>>>>>> b15fa688a7a959fb2df213796536750a8f9d6995
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1693, 330)
@@ -767,5 +778,10 @@ input_pickable = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(72, -38)
 shape = SubResource("RectangleShape2D_7h30g")
+
+[node name="player" parent="." instance=ExtResource("16_1t0n7")]
+position = Vector2(-36, -26)
+scale = Vector2(0.30292, 0.139774)
+move_speed = 150.0
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
