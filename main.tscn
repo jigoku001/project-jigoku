@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://eslt3altm61a" path="res://tileset/fondo.png" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bwue16qbvmnbw" path="res://tileset/interface/botones2.svg" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://cff7civ0m74yt" path="res://texture_button.gd" id="3_h2yge"]
-[ext_resource type="Script" uid="uid://b02vq84dayvdd" path="res://cerrar.gd" id="4_1bvp3"]
+[ext_resource type="Script" path="res://texture_button.gd" id="3_h2yge"]
+[ext_resource type="Script" path="res://cerrar.gd" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://duka1mv1wlhms" path="res://tileset/pixel_art_resized_1920x1080.png" id="5_lquwl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1bvp3"]
@@ -51,8 +51,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5vw27"]
 _data = {
-&"RESET": SubResource("Animation_272bh"),
-&"inicio": SubResource("Animation_7mycd")
+"RESET": SubResource("Animation_272bh"),
+"inicio": SubResource("Animation_7mycd")
 }
 
 [node name="Control" type="Control"]
@@ -104,7 +104,7 @@ texture = ExtResource("5_lquwl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PixelArtResized1920x1080"]
 libraries = {
-&"": SubResource("AnimationLibrary_5vw27")
+"": SubResource("AnimationLibrary_5vw27")
 }
 
 [connection signal="pressed" from="VBoxContainer/TextureButton" to="VBoxContainer/TextureButton" method="_on_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cgnpyu72rjg1l"]
 
-[ext_resource type="Script" uid="uid://cphiqdp2gg255" path="res://juan/Enemigos/Goblo.gd" id="1_jqc6t"]
+[ext_resource type="Script" path="res://juan/Enemigos/Goblo.gd" id="1_jqc6t"]
 [ext_resource type="Texture2D" uid="uid://d2knuvlp70872" path="res://juan/level tres.png" id="2_q5qt7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03swy"]
