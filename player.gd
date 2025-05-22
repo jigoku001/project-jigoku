@@ -37,7 +37,7 @@ func update_animation():
 		return
 		 
 	if velocity.x:
-		animated_sprite.play("caminar")
+		animated_sprite.play("walk")
 	else:
 		animated_sprite.play("idle")
 func _process(_delta):

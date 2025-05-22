@@ -1,9 +1,9 @@
 [gd_scene load_steps=29 format=3 uid="uid://ckwkkmmqk44d2"]
 
-[ext_resource type="Script" uid="uid://doyv04xvwptci" path="res://juan/Niveles/camera_2d.gd" id="1_50uyw"]
-[ext_resource type="Script" uid="uid://yiul6oh82m8o" path="res://pua_muerte.gd" id="1_fnctx"]
+[ext_resource type="Script" path="res://juan/Niveles/camera_2d.gd" id="1_50uyw"]
+[ext_resource type="Script" path="res://pua_muerte.gd" id="1_fnctx"]
 [ext_resource type="Texture2D" uid="uid://q28x8svbai38" path="res://juan/sripte 6 fase.png" id="2_fnctx"]
-[ext_resource type="PackedScene" uid="uid://def6vryd8p2g3" path="res://player.tscn" id="2_lpuds"]
+[ext_resource type="PackedScene" uid="uid://c74tddmk0x8tw" path="res://player.tscn" id="2_lpuds"]
 [ext_resource type="Texture2D" uid="uid://d8hsb7r3uiqo" path="res://juan/Sprite level 2fas e1.png" id="3_1t0n7"]
 [ext_resource type="Texture2D" uid="uid://d2knuvlp70872" path="res://juan/level tres.png" id="4_3im4l"]
 [ext_resource type="Texture2D" uid="uid://lete80p30ne3" path="res://juan/Sprite-0001.png" id="5_2n6wq"]
@@ -754,10 +754,10 @@ position = Vector2(1476, -66)
 position = Vector2(1812, 322)
 
 [node name="player" parent="." instance=ExtResource("2_lpuds")]
-position = Vector2(2045, 304)
-scale = Vector2(0.279999, 0.119999)
+position = Vector2(-22, -1)
+scale = Vector2(0.234443, 0.131531)
 move_speed = 150.0
-jump_speed = 380.0
+jump_speed = 300.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1693, 330)
