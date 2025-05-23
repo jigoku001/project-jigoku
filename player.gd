@@ -31,15 +31,15 @@ func jump(delta):
 func update_animation():
 	if not is_on_floor():
 		if velocity.y < 0:
-			animated_sprite.play("idle")
+			animated_sprite.play("respirar")
 		else: 
-			animated_sprite.play("idle")
+			animated_sprite.play("respirar")
 		return
 		 
 	if velocity.x:
-		animated_sprite.play("walk")
+		animated_sprite.play("caminar")
 	else:
-		animated_sprite.play("idle")
+		animated_sprite.play("respirar")
 func _process(_delta):
 	if position.y > 1200:
 		die()
