@@ -714,7 +714,7 @@ position = Vector2(3177, 627)
 texture = ExtResource("9_ls2kf")
 
 [node name="Ladrillos2" type="Sprite2D" parent="."]
-position = Vector2(1924, 299)
+position = Vector2(1909, 288)
 scale = Vector2(0.457418, -0.216028)
 texture = ExtResource("7_3rqyh")
 
@@ -734,18 +734,15 @@ position = Vector2(4202.5, 623)
 scale = Vector2(0.384766, 0.273438)
 texture = ExtResource("11_ig26m")
 
-[node name="Slime" parent="." instance=ExtResource("12_5jqlr")]
-position = Vector2(129, 0)
-scale = Vector2(0.7, 0.7)
+[node name="Slime" parent="Estrellas2" instance=ExtResource("12_5jqlr")]
+position = Vector2(-10587, -2278.4)
+scale = Vector2(1.81929, 2.56)
 
-[node name="Hurtbox2" type="Area2D" parent="Slime"]
+[node name="Hurtbox2" type="Area2D" parent="Estrellas2/Slime"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slime/Hurtbox2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Estrellas2/Slime/Hurtbox2"]
 position = Vector2(4.29153e-06, -4.76837e-07)
 shape = SubResource("RectangleShape2D_50uyw")
-
-[node name="Slime2" parent="." instance=ExtResource("12_5jqlr")]
-position = Vector2(1510, -63)
 
 [node name="Goblo" parent="." instance=ExtResource("13_bjuv0")]
 position = Vector2(1476, -66)
@@ -753,19 +750,22 @@ position = Vector2(1476, -66)
 [node name="Goblo2" parent="." instance=ExtResource("13_bjuv0")]
 position = Vector2(1812, 322)
 
+[node name="Slime2" parent="Goblo2" instance=ExtResource("12_5jqlr")]
+position = Vector2(-302, -385)
+
 [node name="player" parent="." instance=ExtResource("2_lpuds")]
-position = Vector2(2045, 304)
+position = Vector2(-38, -11)
 scale = Vector2(0.279999, 0.119999)
 move_speed = 150.0
 jump_speed = 380.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(1693, 330)
+position = Vector2(1799, 285)
 disable_mode = 2
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(72, -38)
+position = Vector2(2, 0)
 shape = SubResource("RectangleShape2D_7h30g")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

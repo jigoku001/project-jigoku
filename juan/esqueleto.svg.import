@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dffv438oymdjf"
-path="res://.godot/imported/esqueleto.svg-dcd31dae0d02051766533ef57a46a832.ctex"
+path="res://.godot/imported/esqueleto.svg-c303f3e4e0b0516ee0f7a560ccbb67ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character/esqueleto.svg"
-dest_files=["res://.godot/imported/esqueleto.svg-dcd31dae0d02051766533ef57a46a832.ctex"]
+source_file="res://juan/esqueleto.svg"
+dest_files=["res://.godot/imported/esqueleto.svg-c303f3e4e0b0516ee0f7a560ccbb67ae.ctex"]
 
 [params]
 
