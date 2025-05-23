@@ -1,9 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://ckwkkmmqk44d2"]
+[gd_scene load_steps=30 format=3 uid="uid://ckwkkmmqk44d2"]
 
-[ext_resource type="Script" uid="uid://doyv04xvwptci" path="res://juan/Niveles/camera_2d.gd" id="1_50uyw"]
-[ext_resource type="Script" uid="uid://yiul6oh82m8o" path="res://pua_muerte.gd" id="1_fnctx"]
+[ext_resource type="Script" path="res://juan/Niveles/camera_2d.gd" id="1_50uyw"]
+[ext_resource type="Script" path="res://pua_muerte.gd" id="1_fnctx"]
 [ext_resource type="Texture2D" uid="uid://q28x8svbai38" path="res://juan/sripte 6 fase.png" id="2_fnctx"]
-[ext_resource type="PackedScene" uid="uid://def6vryd8p2g3" path="res://player.tscn" id="2_lpuds"]
 [ext_resource type="Texture2D" uid="uid://d8hsb7r3uiqo" path="res://juan/Sprite level 2fas e1.png" id="3_1t0n7"]
 [ext_resource type="Texture2D" uid="uid://d2knuvlp70872" path="res://juan/level tres.png" id="4_3im4l"]
 [ext_resource type="Texture2D" uid="uid://lete80p30ne3" path="res://juan/Sprite-0001.png" id="5_2n6wq"]
@@ -15,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c318tbrf5abpw" path="res://juan/Background/Estrellas.png" id="11_ig26m"]
 [ext_resource type="PackedScene" uid="uid://dcgyamyaydo0r" path="res://juan/Enemigos/slime.tscn" id="12_5jqlr"]
 [ext_resource type="PackedScene" uid="uid://cgnpyu72rjg1l" path="res://juan/Enemigos/character_body_2d.tscn" id="13_bjuv0"]
+[ext_resource type="PackedScene" uid="uid://b15bhta7aj48n" path="res://player.tscn" id="16_1t0n7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1t0n7"]
 size = Vector2(37.5104, 56.3203)
@@ -631,6 +631,61 @@ sources/5 = SubResource("TileSetAtlasSource_3im4l")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_50uyw"]
 size = Vector2(35.7143, 32.8571)
 
+[sub_resource type="GDScript" id="GDScript_fnctx"]
+script/source = "extends CharacterBody2D
+
+@export var move_speed : float
+@export var jump_speed : float
+@onready var animated_sprite = $AnimatedSprite2D
+var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
+var is_facing_right = true
+
+func _physics_process(delta):
+	
+	jump(delta)
+	move_x()
+	flip()
+	update_animation()
+	move_and_slide()
+
+func move_x():
+	var input_axix = Input.get_axis(\"ui_left\",\"ui_right\")
+	velocity.x = input_axix * move_speed
+	
+func flip():
+	if (is_facing_right and velocity.x < 0 ) or (not is_facing_right and velocity.x > 0):
+			scale.x *= -1
+			is_facing_right = not is_facing_right
+func jump(delta):
+	if Input.is_action_just_pressed(\"ui_up\") and is_on_floor():
+		velocity.y = -jump_speed 
+	if not is_on_floor():	
+		velocity.y += gravity * delta
+
+func update_animation():
+	if not is_on_floor():
+		if velocity.y < 0:
+			animated_sprite.play('respirar')
+		else: 
+			animated_sprite.play('respirar')
+		return
+		 
+	if velocity.x:
+		animated_sprite.play('caminar')
+	else:
+		animated_sprite.play('respirar')
+func _process(_delta):
+	if position.y > 1200:
+		die()
+func _on_Hurtbox_body_entered(body):
+	if body.is_in_group(\"Peligro\"):
+		body.call_deferred(\"die\")
+func die():
+	get_tree().reload_current_scene()
+#func _on_area_2d_body_entered(body: Node2D) -> void:
+	#ass # Replace with function body.
+"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7h30g"]
 size = Vector2(73.5, 20)
 
@@ -749,6 +804,7 @@ position = Vector2(1476, -66)
 
 [node name="Goblo2" parent="." instance=ExtResource("13_bjuv0")]
 position = Vector2(1812, 322)
+<<<<<<< HEAD
 
 [node name="Slime2" parent="Goblo2" instance=ExtResource("12_5jqlr")]
 position = Vector2(-302, -385)
@@ -758,6 +814,11 @@ position = Vector2(-38, -11)
 scale = Vector2(0.279999, 0.119999)
 move_speed = 150.0
 jump_speed = 380.0
+=======
+script = SubResource("GDScript_fnctx")
+move_speed = 0.0
+jump_speed = 0.0
+>>>>>>> 63dac84b5d383286708f466b41e3ad77b8a362e6
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1799, 285)
@@ -767,5 +828,11 @@ input_pickable = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(2, 0)
 shape = SubResource("RectangleShape2D_7h30g")
+
+[node name="player" parent="." groups=["Player"] instance=ExtResource("16_1t0n7")]
+position = Vector2(-36, -26)
+scale = Vector2(0.30292, 0.139774)
+move_speed = 150.0
+jump_speed = 300.0
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
