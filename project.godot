@@ -18,6 +18,14 @@ boot_splash/image="uid://b8vbn0m3wx343"
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=4000
 
+[debug]
+
+shapes/collision/draw_2d_outlines=false
+
+[display]
+
+window/size/resizable=false
+
 [global_group]
 
 Peligro=""
