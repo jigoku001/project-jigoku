@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwymcupi58bif"
-path="res://.godot/imported/dead forest.png-4bde106d9337a150a5d164155df8e0aa.ctex"
+path="res://.godot/imported/dead forest.png-efd21f600b0f1643466bd0714a3a676e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juan/Background/Nivel 1/Bosque Muerto/dead forest.png"
-dest_files=["res://.godot/imported/dead forest.png-4bde106d9337a150a5d164155df8e0aa.ctex"]
+source_file="res://backgroun-limbo/Background/Nivel 1/Bosque Muerto/dead forest.png"
+dest_files=["res://.godot/imported/dead forest.png-efd21f600b0f1643466bd0714a3a676e.ctex"]
 
 [params]
 

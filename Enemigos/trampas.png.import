@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kmgajr6hqbr3"
-path="res://.godot/imported/4.png-b11a0374fb7d950911e4711434c19b76.ctex"
+uid="uid://b7aq8pk2ypsjd"
+path="res://.godot/imported/trampas.png-3434b3d6e29898f022fd0e84d3ae5d8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://backgroun-limbo/Background/Nivel 1/Trono/4.png"
-dest_files=["res://.godot/imported/4.png-b11a0374fb7d950911e4711434c19b76.ctex"]
+source_file="res://Enemigos/trampas.png"
+dest_files=["res://.godot/imported/trampas.png-3434b3d6e29898f022fd0e84d3ae5d8f.ctex"]
 
 [params]
 

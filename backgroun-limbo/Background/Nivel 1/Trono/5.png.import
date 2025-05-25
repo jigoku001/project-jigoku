@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmj5agwmh0d18"
-path="res://.godot/imported/5.png-149079389be863c701cbc0aeb2f1a4a8.ctex"
+path="res://.godot/imported/5.png-7acb985f700369e674c85c914859131b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juan/Background/Nivel 1/Trono/5.png"
-dest_files=["res://.godot/imported/5.png-149079389be863c701cbc0aeb2f1a4a8.ctex"]
+source_file="res://backgroun-limbo/Background/Nivel 1/Trono/5.png"
+dest_files=["res://.godot/imported/5.png-7acb985f700369e674c85c914859131b.ctex"]
 
 [params]
 

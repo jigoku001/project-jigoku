@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5j8gi680ll0"]
 
-[ext_resource type="Texture2D" uid="uid://bgentoaglomhy" path="res://juan/Background/terrace.png" id="1_y26ei"]
+[ext_resource type="Texture2D" uid="uid://bgentoaglomhy" path="res://backgroun-limbo/Background/terrace.png" id="1_y26ei"]
 [ext_resource type="FontFile" uid="uid://bvn5ob0rrobqr" path="res://fonts/PressStart2P-Regular.ttf" id="1_yxx3c"]
 
 [node name="GameOver" type="Control"]
