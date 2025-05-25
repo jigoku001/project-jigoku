@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j6md4o20fg5o"
-path="res://.godot/imported/castle.png-bc6e0983a9ace9c64b9579caeba934c2.ctex"
+path="res://.godot/imported/castle.png-3c14a8ff062b059435e9df506b71cb3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juan/Background/Nivel 1/Castllo/castle.png"
-dest_files=["res://.godot/imported/castle.png-bc6e0983a9ace9c64b9579caeba934c2.ctex"]
+source_file="res://backgroun-limbo/Background/Nivel 1/Castllo/castle.png"
+dest_files=["res://.godot/imported/castle.png-3c14a8ff062b059435e9df506b71cb3e.ctex"]
 
 [params]
 

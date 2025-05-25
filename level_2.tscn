@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://c5fwpgy4ngwgl"]
+[gd_scene load_steps=6 format=4 uid="uid://c5fwpgy4ngwgl"]
 
-[ext_resource type="Texture2D" uid="uid://d2knuvlp70872" path="res://juan/level tres.png" id="1_jg0dc"]
-[ext_resource type="PackedScene" uid="uid://def6vryd8p2g3" path="res://player.tscn" id="2_nmjpi"]
+[ext_resource type="PackedScene" uid="uid://b15bhta7aj48n" path="res://player.tscn" id="2_nmjpi"]
 [ext_resource type="Texture2D" uid="uid://do6vb032ak6on" path="res://tileset/trampas nuevas.png" id="2_xdadj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nmjpi"]
-texture = ExtResource("1_jg0dc")
 17:0/0 = 0
 18:0/0 = 0
 2:1/0 = 0

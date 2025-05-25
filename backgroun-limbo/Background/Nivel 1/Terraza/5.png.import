@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b50lp6ic4dg4r"
-path="res://.godot/imported/5.png-1afffcbced1dbe05db4b335bfaa199f4.ctex"
+path="res://.godot/imported/5.png-95ca47e5373b6db29822c02c304e55a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juan/Background/Nivel 1/Terraza/5.png"
-dest_files=["res://.godot/imported/5.png-1afffcbced1dbe05db4b335bfaa199f4.ctex"]
+source_file="res://backgroun-limbo/Background/Nivel 1/Terraza/5.png"
+dest_files=["res://.godot/imported/5.png-95ca47e5373b6db29822c02c304e55a0.ctex"]
 
 [params]
 

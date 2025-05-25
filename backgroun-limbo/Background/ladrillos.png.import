@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://v20gddyhkdmq"
-path="res://.godot/imported/ladrillos.png-eef8da34dff6e69e9d6329d66375217c.ctex"
+path="res://.godot/imported/ladrillos.png-4b5fc9b56d41a1899bb77204d6d9147b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juan/Background/ladrillos.png"
-dest_files=["res://.godot/imported/ladrillos.png-eef8da34dff6e69e9d6329d66375217c.ctex"]
+source_file="res://backgroun-limbo/Background/ladrillos.png"
+dest_files=["res://.godot/imported/ladrillos.png-4b5fc9b56d41a1899bb77204d6d9147b.ctex"]
 
 [params]
 

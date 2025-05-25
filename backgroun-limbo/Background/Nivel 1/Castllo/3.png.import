@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb2dt1mwh6ayg"
-path="res://.godot/imported/3.png-f9881049c00b0259b09754487e2bf17d.ctex"
+path="res://.godot/imported/3.png-f0a11c72e15c7793f9945ccbea3a8fe3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juan/Background/Nivel 1/Castllo/3.png"
-dest_files=["res://.godot/imported/3.png-f9881049c00b0259b09754487e2bf17d.ctex"]
+source_file="res://backgroun-limbo/Background/Nivel 1/Castllo/3.png"
+dest_files=["res://.godot/imported/3.png-f0a11c72e15c7793f9945ccbea3a8fe3.ctex"]
 
 [params]
 

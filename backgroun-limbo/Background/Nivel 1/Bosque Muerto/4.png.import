@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bskkjy3g26gen"
-path="res://.godot/imported/4.png-7419ea19633684652daa9f9cd7044d8a.ctex"
+path="res://.godot/imported/4.png-e3f180bff0f6afc4c2f6cabc700e0f85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://juan/Background/Nivel 1/Bosque Muerto/4.png"
-dest_files=["res://.godot/imported/4.png-7419ea19633684652daa9f9cd7044d8a.ctex"]
+source_file="res://backgroun-limbo/Background/Nivel 1/Bosque Muerto/4.png"
+dest_files=["res://.godot/imported/4.png-e3f180bff0f6afc4c2f6cabc700e0f85.ctex"]
 
 [params]
 
