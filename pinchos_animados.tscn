@@ -1,0 +1,148 @@
+[gd_scene load_steps=18 format=3 uid="uid://dix6a5x14tyfd"]
+
+[ext_resource type="Texture2D" uid="uid://dghplrfb6ovm8" path="res://tileset/pinchos animados.png" id="1_rh4o8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgmhi"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(0, 170, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oufbd"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(192, 85, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohfpb"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(128, 85, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4c2r"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(64, 85, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onapx"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(0, 85, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocgkr"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(192, 0, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wedd8"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(128, 0, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3siyl"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(64, 0, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2865"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(128, 0, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uodem"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(192, 0, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xl4b"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(0, 85, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a572p"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(64, 85, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ayhy"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(128, 85, 64, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66f5h"]
+atlas = ExtResource("1_rh4o8")
+region = Rect2(192, 85, 64, 85)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slmwk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgmhi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oufbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohfpb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4c2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onapx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocgkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wedd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3siyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2865")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2865")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2865")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uodem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uodem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xl4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a572p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a572p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a572p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ayhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ayhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ayhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66f5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66f5h")
+}],
+"loop": true,
+"name": &"pinchos ",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xcdn"]
+size = Vector2(49, 69)
+
+[node name="pinchos-animados" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_slmwk")
+animation = &"pinchos "
+frame = 7
+frame_progress = 0.615522
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_0xcdn")
