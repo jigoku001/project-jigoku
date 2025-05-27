@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dcgyamyaydo0r"]
 
-[ext_resource type="Texture2D" uid="uid://b7aq8pk2ypsjd" path="res://juan/Enemigos/trampas.png" id="1_42uyk"]
+[ext_resource type="Texture2D" uid="uid://b7aq8pk2ypsjd" path="res://Enemigos/trampas.png" id="1_42uyk"]
 
 [sub_resource type="GDScript" id="GDScript_eeisy"]
 script/source = "extends CharacterBody2D
