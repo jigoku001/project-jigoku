@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cerg8tkkj5oks"]
 
-[ext_resource type="Texture2D" uid="uid://db752k0f2m7k4" path="res://juan/Enemigo 1.png" id="1_chaff"]
+[sub_resource type="Resource" id="Resource_r66y6"]
+metadata/__load_path__ = "res://juan/Enemigo 1.png"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rhtx1"]
 radius = 38.0
@@ -11,7 +12,7 @@ height = 94.0
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1.90735e-06, -1.90735e-06)
 scale = Vector2(3.78333, 3.12778)
-texture = ExtResource("1_chaff")
+texture = SubResource("Resource_r66y6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_rhtx1")

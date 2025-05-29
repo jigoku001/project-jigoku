@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bxqsf062mkwtu"]
+[gd_scene load_steps=10 format=4 uid="uid://bxqsf062mkwtu"]
 
 [ext_resource type="Texture2D" uid="uid://c7jjq828btyse" path="res://backgroun-limbo/limbo-fondo.jpg" id="1_3fw06"]
 [ext_resource type="Texture2D" uid="uid://dm5kpqlinba7r" path="res://backgroun-limbo/limbo-montaña.png" id="2_x6b71"]
@@ -3547,9 +3547,6 @@ texture = ExtResource("5_ojr5r")
 [sub_resource type="TileSet" id="TileSet_6bf2b"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_01iwd")
-
-[sub_resource type="Resource" id="Resource_d21ai"]
-metadata/__load_path__ = "res://player2.tscn"
 
 [node name="limbo" type="Node2D"]
 

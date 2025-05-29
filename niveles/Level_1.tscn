@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://qqyllvfiss6p"]
+[gd_scene load_steps=48 format=3 uid="uid://qqyllvfiss6p"]
 
 [ext_resource type="Script" uid="uid://doyv04xvwptci" path="res://niveles/camera_2d.gd" id="2_gpegq"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" path="res://juan/Piso/Piso 2.tscn" id="4_06fb5"]
 [ext_resource type="PackedScene" path="res://juan/Piso/Piso_1.tscn" id="5_vd51x"]
 [ext_resource type="PackedScene" uid="uid://cerg8tkkj5oks" path="res://Enemigos/Enemigo 1.tscn" id="6_lcymv"]
@@ -8,9 +9,136 @@
 [ext_resource type="Texture2D" path="res://juan/sripte 6 fase.png" id="9_hb4km"]
 [ext_resource type="PackedScene" path="res://juan/Piso/Piso 1.tscn" id="9_id7vq"]
 [ext_resource type="PackedScene" uid="uid://ciuxnps8slrk2" path="res://Enemigos/Enemigo 2.tscn" id="10_h38ke"]
+=======
+[ext_resource type="PackedScene" uid="uid://cerg8tkkj5oks" path="res://Enemigos/Enemigo 1.tscn" id="6_lcymv"]
+[ext_resource type="PackedScene" uid="uid://ict3lvdxmtip" path="res://juan/Personaje/Personaje prueba.tscn" id="7_f17s5"]
+[ext_resource type="PackedScene" uid="uid://ciuxnps8slrk2" path="res://Enemigos/Enemigo 2.tscn" id="10_h38ke"]
+
+[sub_resource type="Resource" id="Resource_cgoml"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_r2qv8"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_lx2as"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_d5eu7"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_m2wd0"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_1ealb"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_4gje4"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_lhl0l"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_f3nv8"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_qejh6"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_yvluy"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_u3bbi"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_fhhvm"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_4iixq"]
+metadata/__load_path__ = "res://juan/Piso/Piso 1.tscn"
+
+[sub_resource type="Resource" id="Resource_s1res"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_wr4ka"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_0jbqj"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_5q2rp"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_v87ct"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_0337m"]
+metadata/__load_path__ = "res://juan/Piso/Piso 1.tscn"
+
+[sub_resource type="Resource" id="Resource_oosom"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_hg06j"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_pr4cu"]
+metadata/__load_path__ = "res://juan/Piso/Piso 1.tscn"
+
+[sub_resource type="Resource" id="Resource_kgkpu"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_vb65j"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_5d53l"]
+metadata/__load_path__ = "res://juan/Piso/Piso 1.tscn"
+
+[sub_resource type="Resource" id="Resource_uhfq3"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_vqtwd"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_fe7ba"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_sn132"]
+metadata/__load_path__ = "res://juan/Piso/Piso 1.tscn"
+
+[sub_resource type="Resource" id="Resource_ci40t"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_gkof8"]
+metadata/__load_path__ = "res://juan/Piso/Piso 1.tscn"
+
+[sub_resource type="Resource" id="Resource_o1m0j"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_h23vw"]
+metadata/__load_path__ = "res://juan/Piso/Piso 1.tscn"
+
+[sub_resource type="Resource" id="Resource_pgjdj"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_b5qsp"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_d713d"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_afwyd"]
+metadata/__load_path__ = "res://juan/Piso/Piso_1.tscn"
+
+[sub_resource type="Resource" id="Resource_xd6an"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_ew52m"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+
+[sub_resource type="Resource" id="Resource_2133g"]
+metadata/__load_path__ = "res://juan/Piso/Piso 2.tscn"
+>>>>>>> c5db7fb0cc487405a5b88baaa4e3d5a7f3e80771
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_utuc1"]
-texture = ExtResource("9_hb4km")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -202,62 +330,62 @@ position_smoothing_speed = 10.0
 script = ExtResource("2_gpegq")
 object_to_follow = NodePath("../CharacterBody2D")
 
-[node name="StaticBody2D" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D" parent="."]
 position = Vector2(-650, 380)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D2" parent="."]
 position = Vector2(-482, 381)
 
-[node name="StaticBody2D3" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D3" parent="."]
 position = Vector2(-320, 381)
 
-[node name="StaticBody2D4" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D4" parent="."]
 position = Vector2(-507, 249)
 
-[node name="StaticBody2D5" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D5" parent="."]
 position = Vector2(-209, 248)
 
-[node name="StaticBody2D6" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D6" parent="."]
 position = Vector2(-353, 113)
 
-[node name="StaticBody2D7" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D7" parent="."]
 position = Vector2(-117, 380)
 
-[node name="StaticBody2D8" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D8" parent="."]
 position = Vector2(304, 380)
 
-[node name="StaticBody2D9" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D9" parent="."]
 position = Vector2(-936, -115)
 rotation = 1.57735
 
-[node name="StaticBody2D10" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D10" parent="."]
 position = Vector2(-578, 54)
 
-[node name="StaticBody2D11" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D11" parent="."]
 position = Vector2(-848, -8)
 
 [node name="Enemigo 1" parent="." instance=ExtResource("6_lcymv")]
 position = Vector2(-854, -80)
 
-[node name="StaticBody2D12" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D12" parent="."]
 position = Vector2(-848, -223)
 rotation = 3.13905
 
-[node name="StaticBody2D13" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D13" parent="."]
 position = Vector2(469, 380)
 
-[node name="Estalactitas" parent="." instance=ExtResource("9_id7vq")]
+[node name="Estalactitas" parent="."]
 position = Vector2(817, 293)
 rotation = -0.34692
 
-[node name="StaticBody2D14" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D14" parent="."]
 position = Vector2(615, 229)
 
-[node name="StaticBody2D15" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D15" parent="."]
 position = Vector2(1155, 163)
 rotation = -0.433706
 
-[node name="StaticBody2D16" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D16" parent="."]
 position = Vector2(376, 115)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("10_h38ke")]
@@ -266,55 +394,55 @@ position = Vector2(1175, 31)
 [node name="RigidBody2D2" parent="." instance=ExtResource("10_h38ke")]
 position = Vector2(1166, -689)
 
-[node name="StaticBody2D17" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D17" parent="."]
 position = Vector2(1430, 37)
 
-[node name="StaticBody2D18" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D18" parent="."]
 position = Vector2(1735, 120)
 
 [node name="RigidBody2D3" parent="." instance=ExtResource("10_h38ke")]
 position = Vector2(1689, -954)
 
-[node name="Estalactitas2" parent="." instance=ExtResource("9_id7vq")]
+[node name="Estalactitas2" parent="."]
 position = Vector2(2065, 121)
 
-[node name="StaticBody2D19" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D19" parent="."]
 position = Vector2(-45, 381)
 
-[node name="StaticBody2D20" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D20" parent="."]
 position = Vector2(-113, 45)
 
 [node name="RigidBody2D4" parent="." instance=ExtResource("10_h38ke")]
 position = Vector2(-737, -346)
 
-[node name="Estalactitas3" parent="." instance=ExtResource("9_id7vq")]
+[node name="Estalactitas3" parent="."]
 position = Vector2(2774, 120)
 
-[node name="StaticBody2D21" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D21" parent="."]
 position = Vector2(1968, -21)
 
-[node name="StaticBody2D22" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D22" parent="."]
 position = Vector2(3122, 154)
 rotation = 0.35439
 
-[node name="Estalactitas4" parent="." instance=ExtResource("9_id7vq")]
+[node name="Estalactitas4" parent="."]
 position = Vector2(3455, 278)
 rotation = 0.357884
 
 [node name="RigidBody2D5" parent="." instance=ExtResource("10_h38ke")]
 position = Vector2(3134, -997)
 
-[node name="StaticBody2D23" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D23" parent="."]
 position = Vector2(2785, -94)
 
-[node name="StaticBody2D24" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D24" parent="."]
 position = Vector2(2839, -153)
 rotation = -1.64432
 
-[node name="StaticBody2D25" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D25" parent="."]
 position = Vector2(3899, 378)
 
-[node name="Estalactitas5" parent="." instance=ExtResource("9_id7vq")]
+[node name="Estalactitas5" parent="."]
 position = Vector2(4227, 380)
 
 [node name="Pixil-frame-0" type="Sprite2D" parent="."]
@@ -327,43 +455,43 @@ gravity = 600
 jump_speed = 450
 speed = 300
 
-[node name="StaticBody2D26" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D26" parent="."]
 position = Vector2(4152, 209)
 
-[node name="Estalactitas7" parent="." instance=ExtResource("9_id7vq")]
+[node name="Estalactitas7" parent="."]
 position = Vector2(4819, 134)
 rotation = -1.57667
 
-[node name="StaticBody2D27" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D27" parent="."]
 position = Vector2(4823, 483)
 rotation = -1.54732
 
-[node name="Estalactitas8" parent="." instance=ExtResource("9_id7vq")]
+[node name="Estalactitas8" parent="."]
 position = Vector2(5071, -122)
 
-[node name="StaticBody2D28" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D28" parent="."]
 position = Vector2(5676, -335)
 rotation = 1.59432
 
-[node name="StaticBody2D29" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D29" parent="."]
 position = Vector2(5717, -342)
 rotation = -0.758799
 
-[node name="StaticBody2D30" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D30" parent="."]
 position = Vector2(5640, -323)
 rotation = 0.735901
 
-[node name="StaticBody2D31" parent="." instance=ExtResource("5_vd51x")]
+[node name="StaticBody2D31" parent="."]
 position = Vector2(5679, -464)
 rotation = 1.5805
 
-[node name="StaticBody2D32" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D32" parent="."]
 position = Vector2(5960, 436)
 
-[node name="StaticBody2D33" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D33" parent="."]
 position = Vector2(6109, 436)
 
-[node name="StaticBody2D34" parent="." instance=ExtResource("4_06fb5")]
+[node name="StaticBody2D34" parent="."]
 position = Vector2(1873, 534)
 
 [node name="Pixil-frame-1" type="Sprite2D" parent="."]
