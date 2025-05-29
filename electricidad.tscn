@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://cdfwxe1ukjqyp"]
+
+[ext_resource type="Texture2D" uid="uid://cgmh3nigcsslb" path="res://tileset/electric.png" id="1_0eiub"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5lr7"]
+atlas = ExtResource("1_0eiub")
+region = Rect2(0, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs3bi"]
+atlas = ExtResource("1_0eiub")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a6yu"]
+atlas = ExtResource("1_0eiub")
+region = Rect2(64, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6q2hy"]
+atlas = ExtResource("1_0eiub")
+region = Rect2(0, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a2gp"]
+atlas = ExtResource("1_0eiub")
+region = Rect2(64, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alg0f"]
+atlas = ExtResource("1_0eiub")
+region = Rect2(0, 96, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5qeo"]
+atlas = ExtResource("1_0eiub")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl2s4"]
+atlas = ExtResource("1_0eiub")
+region = Rect2(64, 96, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_visdl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5lr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gs3bi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1a6yu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6q2hy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a2gp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alg0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5qeo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl2s4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 21.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_phcm5"]
+size = Vector2(51, 20)
+
+[node name="electricidad" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_visdl")
+frame_progress = 0.566138
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_phcm5")
