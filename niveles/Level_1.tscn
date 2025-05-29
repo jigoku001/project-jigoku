@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://qqyllvfiss6p"]
 
-[ext_resource type="Script" uid="uid://doyv04xvwptci" path="res://juan/Niveles/camera_2d.gd" id="2_gpegq"]
-[ext_resource type="PackedScene" uid="uid://ebe0po0ylr46" path="res://juan/Piso/Piso 2.tscn" id="4_06fb5"]
-[ext_resource type="PackedScene" uid="uid://b1c1jgw5r5tt2" path="res://juan/Piso/Piso_1.tscn" id="5_vd51x"]
-[ext_resource type="PackedScene" uid="uid://cerg8tkkj5oks" path="res://juan/Enemigos/Enemigo 1.tscn" id="6_lcymv"]
+[ext_resource type="Script" uid="uid://doyv04xvwptci" path="res://niveles/camera_2d.gd" id="2_gpegq"]
+[ext_resource type="PackedScene" path="res://juan/Piso/Piso 2.tscn" id="4_06fb5"]
+[ext_resource type="PackedScene" path="res://juan/Piso/Piso_1.tscn" id="5_vd51x"]
+[ext_resource type="PackedScene" uid="uid://cerg8tkkj5oks" path="res://Enemigos/Enemigo 1.tscn" id="6_lcymv"]
 [ext_resource type="PackedScene" uid="uid://ict3lvdxmtip" path="res://juan/Personaje/Personaje prueba.tscn" id="7_f17s5"]
-[ext_resource type="Texture2D" uid="uid://q28x8svbai38" path="res://juan/sripte 6 fase.png" id="9_hb4km"]
-[ext_resource type="PackedScene" uid="uid://3216r2tt1qsf" path="res://juan/Piso/Piso 1.tscn" id="9_id7vq"]
-[ext_resource type="PackedScene" uid="uid://ciuxnps8slrk2" path="res://juan/Enemigos/Enemigo 2.tscn" id="10_h38ke"]
+[ext_resource type="Texture2D" path="res://juan/sripte 6 fase.png" id="9_hb4km"]
+[ext_resource type="PackedScene" path="res://juan/Piso/Piso 1.tscn" id="9_id7vq"]
+[ext_resource type="PackedScene" uid="uid://ciuxnps8slrk2" path="res://Enemigos/Enemigo 2.tscn" id="10_h38ke"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_utuc1"]
 texture = ExtResource("9_hb4km")
