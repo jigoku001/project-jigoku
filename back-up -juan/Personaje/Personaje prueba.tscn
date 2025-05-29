@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ict3lvdxmtip"]
+
+[ext_resource type="Script" uid="uid://5wq0xd1cvhcq" path="res://scripts/personaje_prueba.gd" id="1_x7b0f"]
+
+[sub_resource type="Resource" id="Resource_073n0"]
+metadata/__load_path__ = "res://juan/Enemigo 1 - copia.png"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlbv1"]
+size = Vector2(23.2109, 27.75)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_x7b0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.52588e-05, 3.8147e-06)
+texture = SubResource("Resource_073n0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_vlbv1")
