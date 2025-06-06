@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cfyh4c3pq5r2c"]
+[gd_scene load_steps=14 format=3 uid="uid://cfyh4c3pq5r2c"]
 
 [ext_resource type="Texture2D" uid="uid://d0alhg8gkpbvt" path="res://tileset/cierra 1.png" id="1_uddmt"]
+[ext_resource type="Script" uid="uid://livji15wmj4" path="res://cierra.gd" id="1_vafmp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vafmp"]
 atlas = ExtResource("1_uddmt")
@@ -66,14 +67,36 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8ircw"]
-radius = 24.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqfgs"]
+size = Vector2(12, 2)
 
-[node name="cierra" type="RigidBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_vafmp"]
+radius = 22.0907
+
+[node name="cierra" type="CharacterBody2D" groups=["Peligro"]]
+script = ExtResource("1_vafmp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4kbeo")
+autoplay = "default"
 frame_progress = 0.789712
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_8ircw")
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_hqfgs")
+
+[node name="ray_wall" type="RayCast2D" parent="."]
+target_position = Vector2(-28, -1)
+
+[node name="ray_floor" type="RayCast2D" parent="."]
+position = Vector2(-28, -15)
+target_position = Vector2(0, 20)
+
+[node name="Area2D" type="Area2D" parent="." groups=["Peligro"]]
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("CircleShape2D_vafmp")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

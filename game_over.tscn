@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5j8gi680ll0"]
+[gd_scene load_steps=4 format=3 uid="uid://b5j8gi680ll0"]
 
 [ext_resource type="Texture2D" uid="uid://bgentoaglomhy" path="res://backgroun-limbo/Background/terrace.png" id="1_y26ei"]
 [ext_resource type="FontFile" uid="uid://bvn5ob0rrobqr" path="res://fonts/PressStart2P-Regular.ttf" id="1_yxx3c"]
+[ext_resource type="Script" uid="uid://b3xehsxd4h8qb" path="res://restart.gd" id="2_ccer4"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -35,6 +36,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_yxx3c")
 theme_override_font_sizes/font_size = 32
 text = "Retry"
+script = ExtResource("2_ccer4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576.5, 324)
@@ -44,3 +46,5 @@ texture = ExtResource("1_y26ei")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 324)
 zoom = Vector2(2, 2)
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="CanvasLayer/VBoxContainer/Button" method="_on_pressed"]

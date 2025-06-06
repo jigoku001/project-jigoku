@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cdfwxe1ukjqyp"]
+[gd_scene load_steps=13 format=3 uid="uid://cdfwxe1ukjqyp"]
 
 [ext_resource type="Texture2D" uid="uid://cgmh3nigcsslb" path="res://tileset/electric.png" id="1_0eiub"]
+[ext_resource type="Script" uid="uid://yiul6oh82m8o" path="res://pua_muerte.gd" id="1_k5lr7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5lr7"]
 atlas = ExtResource("1_0eiub")
@@ -69,12 +70,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_phcm5"]
 size = Vector2(51, 20)
 
-[node name="electricidad" type="RigidBody2D"]
+[node name="electricidad" type="Area2D" groups=["Peligro"]]
+collision_mask = 16
+script = ExtResource("1_k5lr7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_visdl")
+autoplay = "default"
 frame_progress = 0.566138
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, 0)
 shape = SubResource("RectangleShape2D_phcm5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqoc6vqmy1w8r"]
+
+[ext_resource type="Texture2D" uid="uid://lbfe57ygm622" path="res://tileset/sripte 6 fase.png" id="1_0r486"]
+[ext_resource type="Script" uid="uid://dljvcvfu3m346" path="res://portal.gd" id="1_ef3v5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef3v5"]
+atlas = ExtResource("1_0r486")
+region = Rect2(186, 82.5, 36, 49)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_grrij"]
+radius = 13.0
+height = 40.0
+
+[node name="portal" type="Area2D"]
+collision_mask = 16
+script = ExtResource("1_ef3v5")
+
+[node name="Sripte6Fase" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_ef3v5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_grrij")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
