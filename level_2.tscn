@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://c5fwpgy4ngwgl"]
+[gd_scene load_steps=11 format=4 uid="uid://c5fwpgy4ngwgl"]
 
 [ext_resource type="Texture2D" uid="uid://dyqkgjcqr4myx" path="res://tileset/level tres.png" id="1_xdadj"]
 [ext_resource type="PackedScene" uid="uid://b15bhta7aj48n" path="res://player.tscn" id="2_nmjpi"]
 [ext_resource type="Texture2D" uid="uid://do6vb032ak6on" path="res://tileset/trampas nuevas.png" id="2_xdadj"]
-[ext_resource type="PackedScene" path="res://electricidad.tscn" id="4_1y8me"]
+[ext_resource type="PackedScene" uid="uid://cdfwxe1ukjqyp" path="res://electricidad.tscn" id="4_1y8me"]
+[ext_resource type="PackedScene" uid="uid://buy6aabtiemn8" path="res://background_2.tscn" id="5_n7ypv"]
+[ext_resource type="PackedScene" uid="uid://cfyh4c3pq5r2c" path="res://cierra.tscn" id="6_0s5r2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nmjpi"]
 texture = ExtResource("1_xdadj")
@@ -313,7 +315,24 @@ collision_visibility_mode = 1
 [node name="player" parent="." instance=ExtResource("2_nmjpi")]
 position = Vector2(19, 121)
 scale = Vector2(0.439997, 0.24)
+move_speed = 200.0
 jump_speed = 370.0
 
 [node name="electricidad" parent="." instance=ExtResource("4_1y8me")]
 position = Vector2(283, 633)
+
+[node name="electricidad2" parent="." instance=ExtResource("4_1y8me")]
+position = Vector2(741, 631)
+scale = Vector2(-1, 0.893)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("5_n7ypv")]
+
+[node name="cierra" parent="." instance=ExtResource("6_0s5r2")]
+position = Vector2(523, 126)
+
+[node name="cierra2" parent="." instance=ExtResource("6_0s5r2")]
+position = Vector2(643, 347)
+
+[node name="cierra3" parent="." instance=ExtResource("6_0s5r2")]
+position = Vector2(520, 618)
+speed = 500

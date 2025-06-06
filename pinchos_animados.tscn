@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://dix6a5x14tyfd"]
+[gd_scene load_steps=16 format=3 uid="uid://dix6a5x14tyfd"]
 
+[ext_resource type="Script" uid="uid://yiul6oh82m8o" path="res://pua_muerte.gd" id="1_jeawd"]
 [ext_resource type="Texture2D" uid="uid://dghplrfb6ovm8" path="res://tileset/pinchos animados.png" id="1_rh4o8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sgmhi"]
@@ -114,13 +115,18 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xcdn"]
 size = Vector2(49, 69)
 
-[node name="pinchos-animados" type="RigidBody2D"]
+[node name="pinchos-animados" type="Area2D" groups=["Peligro"]]
+collision_mask = 16
+script = ExtResource("1_jeawd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_slmwk")
 animation = &"pinchos "
-frame_progress = 0.404852
+autoplay = "pinchos "
+frame_progress = 0.556333
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_0xcdn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
