@@ -1,14 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cfyh4c3pq5r2c"]
+[gd_scene load_steps=11 format=3 uid="uid://cfyh4c3pq5r2c"]
 
 [ext_resource type="Texture2D" uid="uid://d0alhg8gkpbvt" path="res://tileset/cierra 1.png" id="1_uddmt"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vafmp"]
-atlas = ExtResource("1_uddmt")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hqfgs"]
-atlas = ExtResource("1_uddmt")
-region = Rect2(64, 0, 64, 64)
+[ext_resource type="Texture2D" uid="uid://v1osthmgp7je" path="res://tileset/trampas.png" id="2_vafmp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ijdpj"]
 atlas = ExtResource("1_uddmt")
@@ -30,19 +23,13 @@ region = Rect2(320, 0, 64, 64)
 atlas = ExtResource("1_uddmt")
 region = Rect2(384, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tg2tt"]
-atlas = ExtResource("1_uddmt")
-region = Rect2(448, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqfgs"]
+atlas = ExtResource("2_vafmp")
+region = Rect2(240, 0, 80, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4kbeo"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vafmp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hqfgs")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ijdpj")
 }, {
@@ -57,13 +44,18 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_la6vq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tg2tt")
 }],
 "loop": true,
-"name": &"default",
-"speed": 10.0
+"name": &"Cortar",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqfgs")
+}],
+"loop": true,
+"name": &"Estatico",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8ircw"]
@@ -73,7 +65,8 @@ radius = 24.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4kbeo")
-frame_progress = 0.789712
+animation = &"Cortar"
+frame_progress = 0.288071
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Peligro"]]
 shape = SubResource("CircleShape2D_8ircw")
