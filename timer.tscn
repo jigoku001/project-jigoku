@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d2afdkswoyfmn"]
+
+[node name="timer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 991.0
+offset_top = 13.0
+offset_right = 999.0
+offset_bottom = 21.0
+scale = Vector2(16.5, 4)
+text = "time
+"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
