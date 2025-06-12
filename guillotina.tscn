@@ -1,0 +1,164 @@
+[gd_scene load_steps=19 format=3 uid="uid://bsonasmjoqxt2"]
+
+[ext_resource type="Texture2D" uid="uid://cjpcvlk05ax1y" path="res://tileset/Guillotine.png" id="1_5tkmb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcv7m"]
+size = Vector2(28, 9.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_galgm"]
+atlas = ExtResource("1_5tkmb")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4j78"]
+atlas = ExtResource("1_5tkmb")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgnjv"]
+atlas = ExtResource("1_5tkmb")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyb5c"]
+atlas = ExtResource("1_5tkmb")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r01j1"]
+atlas = ExtResource("1_5tkmb")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byub4"]
+atlas = ExtResource("1_5tkmb")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbckn"]
+atlas = ExtResource("1_5tkmb")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ei6j"]
+atlas = ExtResource("1_5tkmb")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r57j"]
+atlas = ExtResource("1_5tkmb")
+region = Rect2(384, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i4ga"]
+atlas = ExtResource("1_5tkmb")
+region = Rect2(432, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhfvy"]
+atlas = ExtResource("1_5tkmb")
+region = Rect2(480, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjuda"]
+atlas = ExtResource("1_5tkmb")
+region = Rect2(528, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ri00e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_galgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4j78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgnjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cyb5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r01j1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byub4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbckn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ei6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r57j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5i4ga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhfvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjuda")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 22.0
+}]
+
+[sub_resource type="Animation" id="Animation_1okl1"]
+resource_name = "cuchilla"
+loop_mode = 1
+step = 0.0454545
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.272727, 0.545455, 0.818182, 1.09091),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, -14.75), Vector2(0, 8), Vector2(1, -15), Vector2(0, 8), Vector2(1, -14.75)]
+}
+
+[sub_resource type="Animation" id="Animation_rnw6t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, -14.75)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tcbhh"]
+_data = {
+&"RESET": SubResource("Animation_rnw6t"),
+&"cuchilla": SubResource("Animation_1okl1")
+}
+
+[node name="Guillotina" type="CharacterBody2D"]
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+show_behind_parent = true
+top_level = true
+light_mask = 31
+visibility_layer = 31
+position = Vector2(1, -14.75)
+shape = SubResource("RectangleShape2D_fcv7m")
+debug_color = Color(1, 0.172549, 0.886275, 0.439216)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ri00e")
+animation = &"Fall"
+autoplay = "Fall"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Hitbox")
+libraries = {
+&"": SubResource("AnimationLibrary_tcbhh")
+}
+autoplay = "cuchilla"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(52.6979, 2.65496)
+zoom = Vector2(3, 3)

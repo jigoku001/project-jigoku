@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://c5fwpgy4ngwgl"]
+[gd_scene load_steps=12 format=4 uid="uid://c5fwpgy4ngwgl"]
 
 [ext_resource type="Texture2D" uid="uid://dyqkgjcqr4myx" path="res://tileset/level tres.png" id="1_xdadj"]
 [ext_resource type="PackedScene" uid="uid://b15bhta7aj48n" path="res://player.tscn" id="2_nmjpi"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cdfwxe1ukjqyp" path="res://electricidad.tscn" id="4_1y8me"]
 [ext_resource type="PackedScene" uid="uid://buy6aabtiemn8" path="res://background_2.tscn" id="5_n7ypv"]
 [ext_resource type="PackedScene" uid="uid://cfyh4c3pq5r2c" path="res://cierra.tscn" id="6_0s5r2"]
+[ext_resource type="PackedScene" uid="uid://bsonasmjoqxt2" path="res://guillotina.tscn" id="7_7j8ne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nmjpi"]
 texture = ExtResource("1_xdadj")
@@ -336,3 +337,6 @@ position = Vector2(643, 347)
 [node name="cierra3" parent="." instance=ExtResource("6_0s5r2")]
 position = Vector2(520, 618)
 speed = 500
+
+[node name="Guillotina" parent="." instance=ExtResource("7_7j8ne")]
+position = Vector2(817, 177)

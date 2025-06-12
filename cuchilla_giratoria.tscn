@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://cfi4dmgtpijp4"]
+
+[ext_resource type="Texture2D" uid="uid://lh0mfbcqbmxa" path="res://tileset/Rotating_blades.png" id="1_d2h2i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24xr0"]
+atlas = ExtResource("1_d2h2i")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8vjl"]
+atlas = ExtResource("1_d2h2i")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dj3fh"]
+atlas = ExtResource("1_d2h2i")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwyx4"]
+atlas = ExtResource("1_d2h2i")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_27888"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24xr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8vjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dj3fh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwyx4")
+}],
+"loop": true,
+"name": &"Cuchilla_Giratoria",
+"speed": 22.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5flng"]
+radius = 19.0263
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_27888")
+animation = &"Cuchilla_Giratoria"
+frame_progress = 0.753843
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.9)
+shape = SubResource("CircleShape2D_5flng")
