@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://lnmh32ped6md"]
+[gd_scene load_steps=4 format=3 uid="uid://lnmh32ped6md"]
 
 [ext_resource type="Script" uid="uid://yiul6oh82m8o" path="res://pua_muerte.gd" id="1_jiowd"]
 [ext_resource type="Texture2D" uid="uid://bi5ykhbioklid" path="res://tileset/Sprite level 2fas e1.png" id="1_wltir"]
@@ -6,9 +6,6 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_jiowd"]
 atlas = ExtResource("1_wltir")
 region = Rect2(170, 78.5, 46, 36)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2x7xp"]
-size = Vector2(32, 30)
 
 [node name="pua" type="Area2D" groups=["Peligro"]]
 collision_mask = 16
@@ -19,8 +16,7 @@ position = Vector2(0, -0.5)
 scale = Vector2(1, 0.972222)
 texture = SubResource("AtlasTexture_jiowd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -2)
-shape = SubResource("RectangleShape2D_2x7xp")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-17, 14, -10, -17, -4, 4, -1, -3, 2, 4, 7, -17, 15, 14)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

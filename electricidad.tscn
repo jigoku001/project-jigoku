@@ -68,7 +68,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_phcm5"]
-size = Vector2(51, 20)
+size = Vector2(20.1156, 7)
 
 [node name="electricidad" type="Area2D" groups=["Peligro"]]
 collision_mask = 16
@@ -77,10 +77,11 @@ script = ExtResource("1_k5lr7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_visdl")
 autoplay = "default"
-frame_progress = 0.566138
+frame_progress = 0.123733
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, 0)
+position = Vector2(3.5, -0.5)
+scale = Vector2(1.93879, 1)
 shape = SubResource("RectangleShape2D_phcm5")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

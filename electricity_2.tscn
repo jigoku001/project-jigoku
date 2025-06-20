@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://cmxdmcwtgw30q"]
+
+[ext_resource type="Script" uid="uid://yiul6oh82m8o" path="res://pua_muerte.gd" id="1_6owv0"]
+[ext_resource type="Texture2D" uid="uid://iid55vxbr62j" path="res://tileset/electric_2.png" id="1_fivy6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6owv0"]
+size = Vector2(42, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk8sb"]
+atlas = ExtResource("1_fivy6")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1r61"]
+atlas = ExtResource("1_fivy6")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbolw"]
+atlas = ExtResource("1_fivy6")
+region = Rect2(0, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aduak"]
+atlas = ExtResource("1_fivy6")
+region = Rect2(64, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar6pa"]
+atlas = ExtResource("1_fivy6")
+region = Rect2(0, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpnyj"]
+atlas = ExtResource("1_fivy6")
+region = Rect2(64, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wr4rp"]
+atlas = ExtResource("1_fivy6")
+region = Rect2(0, 96, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ximip"]
+atlas = ExtResource("1_fivy6")
+region = Rect2(64, 96, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jo4eg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fk8sb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1r61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbolw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aduak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ar6pa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpnyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wr4rp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ximip")
+}],
+"loop": true,
+"name": &"default",
+"speed": 21.0
+}]
+
+[node name="electricity_2" type="Area2D"]
+collision_mask = 16
+script = ExtResource("1_6owv0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, -0.5)
+shape = SubResource("RectangleShape2D_6owv0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Peligro"]]
+sprite_frames = SubResource("SpriteFrames_jo4eg")
+autoplay = "default"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

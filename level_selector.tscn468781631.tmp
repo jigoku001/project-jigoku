@@ -1,0 +1,116 @@
+[gd_scene load_steps=15 format=3 uid="uid://drrn2yxi8yslu"]
+
+[ext_resource type="Texture2D" uid="uid://y1cc7bdrtb72" path="res://tileset/Tiles dungeon/PNG/Background/Bright/bg.png" id="1_2db0o"]
+[ext_resource type="Texture2D" uid="uid://fis48yhnp4gk" path="res://tileset/Tiles dungeon/PNG/Background/Bright/rock5.png" id="2_sn3u0"]
+[ext_resource type="FontFile" uid="uid://bvn5ob0rrobqr" path="res://fonts/PressStart2P-Regular.ttf" id="3_3o3bh"]
+[ext_resource type="Script" uid="uid://b2p2p5s26n8yb" path="res://button.gd" id="4_3o3bh"]
+[ext_resource type="Script" uid="uid://rc552fxb2ofv" path="res://button_2.gd" id="5_gcooo"]
+[ext_resource type="Script" uid="uid://c6fdk2myjmmdx" path="res://button_3.gd" id="6_gcooo"]
+[ext_resource type="Texture2D" uid="uid://duka1mv1wlhms" path="res://tileset/pixel_art_resized_1920x1080.png" id="7_7d84g"]
+
+[sub_resource type="Theme" id="Theme_2db0o"]
+default_font = ExtResource("3_3o3bh")
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_sn3u0"]
+
+[sub_resource type="Theme" id="Theme_3o3bh"]
+default_font = ExtResource("3_3o3bh")
+
+[sub_resource type="Theme" id="Theme_gcooo"]
+default_font = ExtResource("3_3o3bh")
+default_font_size = 0
+
+[sub_resource type="Animation" id="Animation_272bh"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_7mycd"]
+resource_name = "inicio"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.0612, 2),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5vw27"]
+_data = {
+&"RESET": SubResource("Animation_272bh"),
+&"inicio": SubResource("Animation_7mycd")
+}
+
+[node name="level_selector" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(573, 318.5)
+scale = Vector2(1.19375, 1.20556)
+texture = ExtResource("1_2db0o")
+
+[node name="Rock5" type="Sprite2D" parent="."]
+position = Vector2(576, 315)
+scale = Vector2(1.23333, 1.51667)
+texture = ExtResource("2_sn3u0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -16.0
+offset_right = 4.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = SubResource("Theme_2db0o")
+text = "nivel 1"
+icon = SubResource("PortableCompressedTexture2D_sn3u0")
+script = ExtResource("4_3o3bh")
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_3o3bh")
+text = "nivel 2"
+script = ExtResource("5_gcooo")
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_gcooo")
+text = "nivel 3"
+script = ExtResource("6_gcooo")
+
+[node name="PixelArtResized1920x1080" type="Sprite2D" parent="."]
+position = Vector2(589, 329.25)
+scale = Vector2(0.668229, 0.672685)
+texture = ExtResource("7_7d84g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PixelArtResized1920x1080"]
+libraries = {
+&"": SubResource("AnimationLibrary_5vw27")
+}
+
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="VBoxContainer/Button2" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="VBoxContainer/Button3" method="_on_pressed"]
