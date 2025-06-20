@@ -2,7 +2,7 @@ extends Button
 
 
 @export var level_int: int =1
-@export var level_proyect_dir2: String = "res://niveles/nivel_1.tscn"
+@export var level_proyect_dir2: String = "res://nivel_1.tscn"
 
 
 #func _ready() -> void:
