@@ -63,7 +63,7 @@ func _process(_delta):
 	#if body.is_in_group(\"Peligro\"):
 	#	body.call_deferred(\"die\")
 func die():
-		if deaths < 10:
+		if deaths <= 10:
 			player.position = checkpoint_manager.last_location
 			deaths += 1
 			print(deaths)
