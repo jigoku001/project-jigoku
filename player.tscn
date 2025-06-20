@@ -63,7 +63,7 @@ func _process(_delta):
 	#if body.is_in_group(\"Peligro\"):
 	#	body.call_deferred(\"die\")
 func die():
-		if deaths < 10:
+		if deaths < 9:
 			player.position = checkpoint_manager.last_location
 			deaths += 1
 			print(deaths)
@@ -342,6 +342,9 @@ script = SubResource("GDScript_fnctx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+limit_left = -200
+limit_top = -500
+limit_bottom = 1150
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-4.76837e-07, -1)
@@ -350,5 +353,5 @@ sprite_frames = SubResource("SpriteFrames_4flbx")
 animation = &"saltar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 16)
+position = Vector2(-8, -3)
 shape = SubResource("CapsuleShape2D_onrkg")
