@@ -1,7 +1,7 @@
 extends TextureButton
 
 @export var level_int: int =1
-@export var level_proyect_dir: String = "res://niveles/nivel_2.tscn"
+@export var level_proyect_dir: String = "res://niveles/nivel_1.tscn"
 
 
 #func _ready() -> void:

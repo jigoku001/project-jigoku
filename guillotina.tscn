@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cjpcvlk05ax1y" path="res://tileset/Guillotine.png" id="1_5tkmb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fcv7m"]
-size = Vector2(28, 9.5)
+size = Vector2(28, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_galgm"]
 atlas = ExtResource("1_5tkmb")
@@ -97,23 +97,6 @@ animations = [{
 "speed": 22.0
 }]
 
-[sub_resource type="Animation" id="Animation_1okl1"]
-resource_name = "cuchilla"
-loop_mode = 1
-step = 0.0454545
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.272727, 0.545455, 0.818182, 1.09091),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, -14.75), Vector2(0, 8), Vector2(1, -15), Vector2(0, 8), Vector2(1, -14.75)]
-}
-
 [sub_resource type="Animation" id="Animation_rnw6t"]
 length = 0.001
 tracks/0/type = "value"
@@ -127,6 +110,24 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, -14.75)]
+}
+
+[sub_resource type="Animation" id="Animation_1okl1"]
+resource_name = "cuchilla"
+length = 0.545459
+loop_mode = 1
+step = 0.0454545
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0486539, 0.0872415, 0.135895, 0.272727, 0.545455, 1.09091),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, -14.75), Vector2(0.641975, -3.5), Vector2(1, 6), Vector2(0, 8), Vector2(0, 8), Vector2(1, -15), Vector2(1, -14.75)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tcbhh"]
@@ -151,6 +152,8 @@ debug_color = Color(1, 0.172549, 0.886275, 0.439216)
 sprite_frames = SubResource("SpriteFrames_ri00e")
 animation = &"Fall"
 autoplay = "Fall"
+frame = 11
+frame_progress = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Hitbox")
@@ -160,5 +163,6 @@ libraries = {
 autoplay = "cuchilla"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 scale = Vector2(52.6979, 2.65496)
 zoom = Vector2(3, 3)

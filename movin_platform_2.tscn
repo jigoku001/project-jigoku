@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmh4rnidg7p2r"]
+
+[ext_resource type="Texture2D" uid="uid://dyqkgjcqr4myx" path="res://tileset/level tres.png" id="1_ls130"]
+[ext_resource type="Script" uid="uid://baiwk2fpkhsno" path="res://movin_platform_2.gd" id="1_m4buc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4buc"]
+atlas = ExtResource("1_ls130")
+region = Rect2(96.437, 143.746, 47.5632, 17.7834)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l773w"]
+size = Vector2(48, 16)
+
+[node name="movin_platform_2" type="AnimatableBody2D"]
+collision_mask = 17
+script = ExtResource("1_m4buc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_m4buc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l773w")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+modulate = Color(1, 0.101961, 1, 1)
+target_position = Vector2(40, 0)
