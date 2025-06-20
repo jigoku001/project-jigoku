@@ -48,7 +48,7 @@ func _on_Hurtbox_body_entered(body):
 	if body.is_in_group("Peligro"):
 		body.call_deferred("die")
 func die():
-	deaths.emit()
+	
 	get_node("res://hud.tscn").reset_timer()
 	get_node("res://hud.tscn").add_death()
 	get_tree().reload_current_scene()

@@ -83,17 +83,14 @@ texture = ExtResource("1_0xm2m")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 13
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -221.0
-offset_top = -352.0
-offset_right = 210.0
-offset_bottom = -93.0
+offset_left = -215.5
+offset_right = 215.5
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
@@ -137,3 +134,4 @@ libraries = {
 [connection signal="pressed" from="VBoxContainer/TextureButton3" to="VBoxContainer/TextureButton3" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/TextureButton2" to="VBoxContainer/TextureButton2" method="_on_pressed"]
 [connection signal="animation_finished" from="PixelArtResized1920x1080/AnimationPlayer" to="VBoxContainer/TextureButton" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="PixelArtResized1920x1080/AnimationPlayer" to="VBoxContainer/TextureButton3" method="_on_animation_player_animation_finished"]

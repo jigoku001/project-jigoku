@@ -1,15 +1,17 @@
-[gd_scene load_steps=20 format=4 uid="uid://c5fwpgy4ngwgl"]
+[gd_scene load_steps=22 format=4 uid="uid://c5fwpgy4ngwgl"]
 
-[ext_resource type="Script" uid="uid://b3jfrc6f8sobv" path="res://level_2.gd" id="1_15wb7"]
+[ext_resource type="Script" path="res://level_2.gd" id="1_15wb7"]
 [ext_resource type="Texture2D" uid="uid://dyqkgjcqr4myx" path="res://tileset/level tres.png" id="1_xdadj"]
 [ext_resource type="PackedScene" uid="uid://b15bhta7aj48n" path="res://player.tscn" id="2_nmjpi"]
 [ext_resource type="Texture2D" uid="uid://do6vb032ak6on" path="res://tileset/trampas nuevas.png" id="2_xdadj"]
 [ext_resource type="PackedScene" uid="uid://cdfwxe1ukjqyp" path="res://electricidad.tscn" id="4_1y8me"]
 [ext_resource type="PackedScene" uid="uid://buy6aabtiemn8" path="res://background_2.tscn" id="5_n7ypv"]
 [ext_resource type="PackedScene" uid="uid://cfyh4c3pq5r2c" path="res://cierra.tscn" id="6_0s5r2"]
-[ext_resource type="PackedScene" uid="uid://cmxdmcwtgw30q" path="res://electricity_2.tscn" id="7_7j8ne"]
+[ext_resource type="PackedScene" path="res://electricity_2.tscn" id="7_7j8ne"]
 [ext_resource type="PackedScene" uid="uid://bmh4rnidg7p2r" path="res://movin_platform_2.tscn" id="8_7dov7"]
-[ext_resource type="Script" uid="uid://wmleyo6s2m5o" path="res://plataformas.gd" id="8_ehv2h"]
+[ext_resource type="Script" path="res://plataformas.gd" id="8_ehv2h"]
+[ext_resource type="PackedScene" uid="uid://qifre4y7yngy" path="res://game_controller.tscn" id="11_eoq84"]
+[ext_resource type="PackedScene" uid="uid://cdvapdluiisuc" path="res://hud.tscn" id="12_yl73a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nmjpi"]
 texture = ExtResource("1_xdadj")
@@ -367,7 +369,7 @@ use_kinematic_bodies = true
 collision_visibility_mode = 1
 
 [node name="player" parent="." instance=ExtResource("2_nmjpi")]
-position = Vector2(33, 319)
+position = Vector2(32, 110)
 scale = Vector2(0.439997, 0.24)
 move_speed = 200.0
 jump_speed = 370.0
@@ -444,3 +446,7 @@ position = Vector2(542, 288)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_7dov7")
+
+[node name="game_controller" parent="." instance=ExtResource("11_eoq84")]
+
+[node name="HUD" parent="." instance=ExtResource("12_yl73a")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://edj6sgi17twb"]
+[gd_scene load_steps=5 format=3 uid="uid://b8l1kbqqv15ne"]
 
 [ext_resource type="Script" uid="uid://ckve3a3dddbaf" path="res://plataforma_trampa.gd" id="1_o0a11"]
 [ext_resource type="Texture2D" uid="uid://dyqkgjcqr4myx" path="res://tileset/level tres.png" id="1_w5ux7"]
@@ -21,4 +21,8 @@ shape = SubResource("RectangleShape2D_hjxbo")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_o0a11")
 
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
