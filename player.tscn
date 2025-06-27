@@ -21,6 +21,7 @@ func _ready() -> void:
 	
 	checkpoint_manager= get_parent().get_node(\"game_controller\")
 	player = get_parent().get_node(\"player\")
+	
 
 func _physics_process(delta):
 	
@@ -56,6 +57,7 @@ func update_animation():
 		animated_sprite.play(\"caminar\")
 	else:
 		animated_sprite.play(\"respirar\")
+		
 func _process(_delta):
 	if position.y > 1200:
 		die()
@@ -63,17 +65,15 @@ func _process(_delta):
 	#if body.is_in_group(\"Peligro\"):
 	#	body.call_deferred(\"die\")
 func die():
-		if deaths < 9:
-			player.position = checkpoint_manager.last_location
-			deaths += 1
-			print(deaths)
-		else:
-			get_tree().change_scene_to_file(\"res://game_over.tscn\")
-
 	
+	if deaths < 9:
+		player.position = checkpoint_manager.last_location
+		deaths += 1
+		
+	else:
+		get_tree().change_scene_to_file(\"res://game_over.tscn\")
 	
-#func _on_area_2d_body_entered(body: Node2D) -> void:
-	#ass # Replace with function body.
+	Global.global_death += 1
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hiqhm"]
