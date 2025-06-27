@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://b21j7skus0fgl"]
+
+[ext_resource type="Script" uid="uid://daynp1xjp8anp" path="res://connect.gd" id="1_3n56f"]
+[ext_resource type="FontFile" uid="uid://bvn5ob0rrobqr" path="res://fonts/PressStart2P-Regular.ttf" id="1_cau7c"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3n56f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cau7c")
+text = "00"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_cau7c")
+placeholder_text = "email
+"
+
+[node name="TextEdit2" type="LineEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cau7c")
+placeholder_text = "password
+"
+emoji_menu_enabled = false
+secret = true
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cau7c")
+text = "login "
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cau7c")
+text = "sing up"
+
+[node name="Timer" type="Timer" parent="VBoxContainer"]
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="timeout" from="VBoxContainer/Timer" to="." method="_on_timer_timeout"]

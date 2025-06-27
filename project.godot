@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Nuevo Proyecto de Juego"
-run/main_scene="res://main.tscn"
+run/main_scene="uid://b21j7skus0fgl"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/bg_color=Color(0.241194, 0.0392072, 0.212422, 1)
 boot_splash/image="res://tileset/logo inicio2.png"
@@ -20,6 +20,7 @@ boot_splash/minimum_display_time=4000
 
 [autoload]
 
+Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 Global="*res://global.gd"
 
 [debug]
@@ -29,6 +30,10 @@ shapes/collision/draw_2d_outlines=false
 [display]
 
 window/size/resizable=false
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg")
 
 [global_group]
 
