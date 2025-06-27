@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cdfwxe1ukjqyp" path="res://electricidad.tscn" id="4_1y8me"]
 [ext_resource type="PackedScene" uid="uid://buy6aabtiemn8" path="res://background_2.tscn" id="5_n7ypv"]
 [ext_resource type="PackedScene" uid="uid://cfyh4c3pq5r2c" path="res://cierra.tscn" id="6_0s5r2"]
-[ext_resource type="PackedScene" path="res://electricity_2.tscn" id="7_7j8ne"]
+[ext_resource type="PackedScene" uid="uid://cmxdmcwtgw30q" path="res://electricity_2.tscn" id="7_7j8ne"]
 [ext_resource type="PackedScene" uid="uid://bmh4rnidg7p2r" path="res://movin_platform_2.tscn" id="8_7dov7"]
 [ext_resource type="Script" path="res://plataformas.gd" id="8_ehv2h"]
 [ext_resource type="PackedScene" uid="uid://qifre4y7yngy" path="res://game_controller.tscn" id="11_eoq84"]
