@@ -5,8 +5,7 @@ var checkpoint_manager
 func _ready() -> void:
 	checkpoint_manager= get_parent().get_node("game_controller")
 	
-func _process(delta: float) -> void:
-	pass
+
 	
 
 
