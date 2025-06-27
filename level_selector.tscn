@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://drrn2yxi8yslu"]
+[gd_scene load_steps=17 format=3 uid="uid://drrn2yxi8yslu"]
 
 [ext_resource type="Texture2D" uid="uid://y1cc7bdrtb72" path="res://tileset/Tiles dungeon/PNG/Background/Bright/bg.png" id="1_2db0o"]
 [ext_resource type="Texture2D" uid="uid://fis48yhnp4gk" path="res://tileset/Tiles dungeon/PNG/Background/Bright/rock5.png" id="2_sn3u0"]
@@ -39,10 +39,20 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_7d84g"]
+resource_name = "nivel2"
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_h538p"]
+resource_name = "nivel3"
+length = 0.001
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5vw27"]
 _data = {
 &"RESET": SubResource("Animation_272bh"),
-&"inicio": SubResource("Animation_7mycd")
+&"inicio": SubResource("Animation_7mycd"),
+&"nivel2": SubResource("Animation_7d84g"),
+&"nivel3": SubResource("Animation_h538p")
 }
 
 [node name="level_selector" type="Control"]

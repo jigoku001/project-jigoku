@@ -8,12 +8,12 @@ extends Button
 #		pass
 
 func _on_pressed():
-	$"../../PixelArtResized1920x1080/AnimationPlayer".play("inicio")
+	$"../../PixelArtResized1920x1080/AnimationPlayer".play("nivel3")
 		
 
 
 func _on_animation_player_animation_finished(anim_name):
-	if (anim_name == "inicio"):
+	if (anim_name == "nivel3"):
 		
 		if level_proyect_dir!= '':
 			get_tree().change_scene_to_file(level_proyect_dir)

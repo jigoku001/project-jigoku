@@ -18,6 +18,10 @@ boot_splash/image="res://tileset/logo inicio2.png"
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=4000
 
+[autoload]
+
+Global="*res://global.gd"
+
 [debug]
 
 shapes/collision/draw_2d_outlines=false
