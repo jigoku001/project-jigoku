@@ -8,7 +8,7 @@ extends TextureButton
 #		pass
 
 func _on_pressed():
-	$"../../PixelArtResized1920x1080/AnimationPlayer".play("inicio")
+	$"../../AnimationPlayer".play("inicio")
 		
 
 

@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://lnmh32ped6md" path="res://rigid_body_2d.tscn" id="7_fhepi"]
 [ext_resource type="PackedScene" uid="uid://bqoc6vqmy1w8r" path="res://portal.tscn" id="8_lxwyk"]
 [ext_resource type="PackedScene" uid="uid://dix6a5x14tyfd" path="res://pinchos_animados.tscn" id="9_vn1cb"]
-[ext_resource type="PackedScene" path="res://moving_platform.tscn" id="10_43t6q"]
+[ext_resource type="PackedScene" uid="uid://crb5hdelyu16j" path="res://moving_platform.tscn" id="10_43t6q"]
 [ext_resource type="PackedScene" uid="uid://b8l1kbqqv15ne" path="res://plataforma trampa.tscn" id="11_txvjl"]
-[ext_resource type="PackedScene" path="res://chackpoint.tscn" id="12_j8syj"]
+[ext_resource type="PackedScene" uid="uid://do1gj12ka1joi" path="res://chackpoint.tscn" id="12_j8syj"]
 [ext_resource type="PackedScene" uid="uid://qifre4y7yngy" path="res://game_controller.tscn" id="12_o46bk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y3dyb"]
