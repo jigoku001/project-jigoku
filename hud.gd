@@ -43,29 +43,3 @@ func add_death():
 #			"deaths" = g_death_counting,
 #		}
 #		var task : FirestoreTask = collection.update(auth.localid,data)
-
-func save_data():
-	var auth = Firebase.Auth.auth
-	if not auth or not auth.localid:
-		return
-
-	var firestore = Firebase.Firestore
-	var document_path := "%s/%s" % [COLLECTION_ID, auth.localid]
-	var data := {
-		"fields": {
-			"jigoku_name": {"stringValue": "test"},
-			"time": {"integerValue": time_elapsed},
-			"deaths": {"integerValue": g_death_counting}
-		}
-	}
-	
-	var task: FirestoreTask = await firestore.update(document_path, data)
-	if task.is_successful():
-		print("Datos guardados correctamente")
-	else:
-		push_error(task.error_message)		
-	
-
-
-func _on_button_pressed() -> void:
-	save_data()

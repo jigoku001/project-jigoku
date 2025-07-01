@@ -1,0 +1,140 @@
+[gd_scene load_steps=11 format=3 uid="uid://dxtpemhbj5e2i"]
+
+[ext_resource type="Texture2D" uid="uid://eslt3altm61a" path="res://tileset/fondo.png" id="1_s08id"]
+[ext_resource type="Theme" uid="uid://dqwwqtp1cview" path="res://fonts/jigoku theme.tres" id="2_j4at4"]
+[ext_resource type="Script" uid="uid://cff7civ0m74yt" path="res://texture_button.gd" id="3_kpf15"]
+[ext_resource type="Script" uid="uid://b02vq84dayvdd" path="res://cerrar.gd" id="4_7nwjs"]
+[ext_resource type="Texture2D" uid="uid://duka1mv1wlhms" path="res://tileset/pixel_art_resized_1920x1080.png" id="4_r3502"]
+
+[sub_resource type="Animation" id="Animation_7nwjs"]
+resource_name = "fundido"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.666667, 1.43333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fe0hb"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_q2321"]
+resource_name = "fundido_2"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.666667, 1.43333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_27ipw"]
+resource_name = "fundido_3"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.666667, 1.43333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u8kje"]
+_data = {
+&"RESET": SubResource("Animation_fe0hb"),
+&"fundido": SubResource("Animation_7nwjs"),
+&"fundido_2": SubResource("Animation_q2321"),
+&"fundido_3": SubResource("Animation_27ipw")
+}
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(577, 326)
+scale = Vector2(2.88337, 3.23383)
+texture = ExtResource("1_s08id")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -126.0
+offset_top = -444.0
+offset_right = 126.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_j4at4")
+text = "jugar
+"
+script = ExtResource("3_kpf15")
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_j4at4")
+text = "niveles
+"
+script = ExtResource("3_kpf15")
+animation_name = "fundido_2"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_j4at4")
+text = "opciones "
+script = ExtResource("3_kpf15")
+animation_name = "fundido_3"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_j4at4")
+text = "log out"
+
+[node name="Button5" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_j4at4")
+text = "salir "
+script = ExtResource("4_7nwjs")
+
+[node name="PixelArtResized1920x1080" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(566, 114)
+texture = ExtResource("4_r3502")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PixelArtResized1920x1080"]
+libraries = {
+&"": SubResource("AnimationLibrary_u8kje")
+}
+
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="VBoxContainer/Button2" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="VBoxContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button5" to="VBoxContainer/Button5" method="_on_pressed"]

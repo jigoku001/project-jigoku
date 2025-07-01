@@ -1,7 +1,7 @@
 extends Button
 
 
-@export var level_proyect_dir2: String = "res://nivel_1.tscn"
+@export var level_proyect_dir2: String = "res://level_2.tscn"
 
 
 func _on_pressed():

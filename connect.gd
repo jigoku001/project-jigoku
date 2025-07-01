@@ -10,12 +10,11 @@ func _ready() -> void:
 	
 	if Firebase.Auth.check_auth_file():
 		$VBoxContainer/Label.text = "autenticado"
-		get_tree().change_scene_to_file(scene)
+		call_deferred("change_to_main_scene")
+
+func change_to_main_scene():
+	get_tree().change_scene_to_file(scene)
 		
-
-	
-
-
 func _on_button_pressed() -> void:
 	var email = $VBoxContainer/TextEdit.text
 	var password = $VBoxContainer/TextEdit2.text
@@ -47,8 +46,7 @@ func on_signup_failed(error_code, message):
 	print(error_code)
 	print(message)
 	$VBoxContainer/Label.text= "registro fallo: $% " +  message
-		
-
 
 func _on_timer_timeout() -> void:
-	get_tree().change_scene_to_scene(scene)
+	call_deferred("change_to_main_scene")
+	

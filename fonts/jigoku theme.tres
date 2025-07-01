@@ -1,0 +1,51 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://dqwwqtp1cview"]
+
+[ext_resource type="Texture2D" uid="uid://b6cl0odq4iegl" path="res://tileset/botones .png" id="1_kqxwq"]
+[ext_resource type="FontFile" uid="uid://bvn5ob0rrobqr" path="res://fonts/PressStart2P-Regular.ttf" id="2_hjlco"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3733b"]
+atlas = ExtResource("1_kqxwq")
+region = Rect2(455.5, -4, 446, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yma42"]
+texture = SubResource("AtlasTexture_3733b")
+texture_margin_left = 45.0
+texture_margin_top = 45.0
+texture_margin_right = 45.0
+texture_margin_bottom = 45.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqxwq"]
+atlas = ExtResource("1_kqxwq")
+region = Rect2(22.433, 0, 433.374, 97)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hjlco"]
+texture = SubResource("AtlasTexture_kqxwq")
+texture_margin_left = 45.0
+texture_margin_top = 45.0
+texture_margin_right = 45.0
+texture_margin_bottom = 45.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gde01"]
+atlas = ExtResource("1_kqxwq")
+region = Rect2(898.33, -1, 445, 100)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uq60g"]
+texture = SubResource("AtlasTexture_gde01")
+texture_margin_left = 45.0
+texture_margin_top = 45.0
+texture_margin_right = 45.0
+texture_margin_bottom = 50.0
+
+[resource]
+Button/colors/font_color = Color(0, 0, 1, 1)
+Button/colors/font_hover_color = Color(0.98278, 0, 0.014686, 1)
+Button/colors/font_pressed_color = Color(1, 0.4, 0, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/font_sizes/font_size = 18
+Button/fonts/font = ExtResource("2_hjlco")
+Button/styles/hover = SubResource("StyleBoxTexture_yma42")
+Button/styles/normal = SubResource("StyleBoxTexture_hjlco")
+Button/styles/pressed = SubResource("StyleBoxTexture_uq60g")
+Label/colors/font_color = Color(0, 0, 1, 1)
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("2_hjlco")

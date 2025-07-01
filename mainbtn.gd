@@ -1,0 +1,17 @@
+extends Button
+
+var scene : String = "res://level_2.tscn"
+
+
+
+func _on_pressed() -> void:
+	$"../../PixelArtResized1920x1080/AnimationPlayer".play("fundido")
+
+
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "fundido":
+		if scene != '':
+			get_tree().change_scene_to_file(scene)
+			
