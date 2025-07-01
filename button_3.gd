@@ -1,7 +1,7 @@
 extends Button
 
-@export var level_int: int =3
-@export var level_proyect_dir: String = "res://level_3.tscn"
+@export var level_int: int = 3
+@export var level_proyect_dir3: String = "res://nivel3.tscn"
 
 
 #func _ready() -> void:
@@ -15,5 +15,5 @@ func _on_pressed():
 func _on_animation_player_animation_finished(anim_name):
 	if (anim_name == "nivel3"):
 		
-		if level_proyect_dir!= '':
-			get_tree().change_scene_to_file(level_proyect_dir)
+		if level_proyect_dir3!= '':
+			get_tree().change_scene_to_file(level_proyect_dir3)

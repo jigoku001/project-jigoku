@@ -1,9 +1,15 @@
 extends Area2D
 
 var checkpoint_manager 
+var easy_mode = Global.easy_mode
 
 func _ready() -> void:
+	
 	checkpoint_manager= get_parent().get_node("game_controller")
+	print(easy_mode)
+	if easy_mode == false:
+		$".".queue_free()
+	
 	
 
 	

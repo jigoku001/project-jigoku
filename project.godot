@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Nuevo Proyecto de Juego"
+config/name="jigoku_principal"
 run/main_scene="uid://b21j7skus0fgl"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/bg_color=Color(0.241194, 0.0392072, 0.212422, 1)
@@ -29,7 +29,8 @@ shapes/collision/draw_2d_outlines=false
 
 [display]
 
-window/size/resizable=false
+window/size/mode=2
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
@@ -39,6 +40,10 @@ enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg")
 
 Peligro=""
 Player=""
+
+[gui]
+
+theme/custom="uid://dqwwqtp1cview"
 
 [input]
 

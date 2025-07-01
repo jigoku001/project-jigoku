@@ -489,7 +489,7 @@ position = Vector2(1781, 1020)
 [node name="game_controller" parent="." instance=ExtResource("12_o46bk")]
 
 [node name="checkPoint" parent="." instance=ExtResource("12_j8syj")]
-position = Vector2(334, 368)
+position = Vector2(341, 345)
 
 [node name="checkPoint2" parent="." instance=ExtResource("12_j8syj")]
 position = Vector2(1728, 721)
