@@ -43,3 +43,30 @@ func add_death():
 #			"deaths" = g_death_counting,
 #		}
 #		var task : FirestoreTask = collection.update(auth.localid,data)
+func save_to_cloud():
+	
+	var data = {
+		"data_1" : 1,
+		"data_2": 2
+	}
+
+	var auth = Firebase.Auth.auth
+	if auth.localid:
+		var collection: FirestoreCollection = Firebase.Firestore.collection(COLLECTION_ID)
+		var task = await collection.get_doc(auth.localid)
+		if task:
+			await collection.update(FirestoreDocument.new(data))
+		else:
+			await collection.add(auth.localid, data)
+
+func load_from_cloud():
+	var auth = Firebase.Auth.auth
+	if auth.localid:
+		var collection: FirestoreCollection = Firebase.Firestore.collection(COLLECTION_ID)
+		var task = await collection.get_doc(auth.localid)
+		var result = task.get_value("fields")
+		print(result)
+
+
+func _on_button_pressed() -> void:
+	save_to_cloud()
