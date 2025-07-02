@@ -7,7 +7,7 @@ var jigoku_name = "test"
 
 
 var music : bool = true
-var easy_mode : bool = true 
+var easy_mode : bool = false
 
 
 
@@ -17,6 +17,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	print(music)
 	print(easy_mode)
+	if global_death > 30:
+		easy_mode = true
 	if music == false:
 		AudioServer.set_bus_mute(0, true)
 	else :

@@ -342,8 +342,8 @@ script = SubResource("GDScript_fnctx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
-limit_left = -200
-limit_top = -500
+limit_left = -32
+limit_top = -32
 limit_bottom = 1150
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

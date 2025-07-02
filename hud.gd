@@ -6,7 +6,7 @@ var time_elapsed := 0.0
 var player 
 var death_counting = 00
 var g_death_counting = 00
-var COLLECTION_ID = "jigoku stats"
+#var COLLECTION_ID = "jigoku stats"
 
 
 @onready var timer_label = $HBoxContainer/MarginContainer/Timer
@@ -42,6 +42,7 @@ func add_death():
 #			"time" = time_elapsed,
 #			"deaths" = g_death_counting,
 #		}
+<<<<<<< HEAD
 #		var task : FirestoreTask = collection.update(auth.localid,data)
 func save_to_cloud():
 	
@@ -70,3 +71,6 @@ func load_from_cloud():
 
 func _on_button_pressed() -> void:
 	save_to_cloud()
+=======
+#		var task : FirestoreTask = collection.update(data)
+>>>>>>> 09a350ad08050cd29c521e949f123ebb72c9814b
