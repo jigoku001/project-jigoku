@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5j8gi680ll0"]
+[gd_scene load_steps=6 format=3 uid="uid://b5j8gi680ll0"]
 
 [ext_resource type="Texture2D" uid="uid://bgentoaglomhy" path="res://backgroun-limbo/Background/terrace.png" id="1_y26ei"]
 [ext_resource type="FontFile" uid="uid://bvn5ob0rrobqr" path="res://fonts/PressStart2P-Regular.ttf" id="1_yxx3c"]
 [ext_resource type="Script" uid="uid://b3xehsxd4h8qb" path="res://restart.gd" id="2_ccer4"]
+[ext_resource type="Script" uid="uid://dov6ghkn1uhln" path="res://back.gd" id="3_ftari"]
 [ext_resource type="AudioStream" uid="uid://n6g2u6qt8ro6" path="res://audios/risa-malvada_WmY5Y40.mp3" id="4_8u835"]
 
 [node name="GameOver" type="Control"]
@@ -39,6 +40,13 @@ theme_override_font_sizes/font_size = 32
 text = "Retry"
 script = ExtResource("2_ccer4")
 
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_yxx3c")
+theme_override_font_sizes/font_size = 30
+text = "back"
+script = ExtResource("3_ftari")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576.5, 324)
 scale = Vector2(0.30026, 0.3)
@@ -53,3 +61,4 @@ stream = ExtResource("4_8u835")
 autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="CanvasLayer/VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button2" to="CanvasLayer/VBoxContainer/Button2" method="_on_pressed"]

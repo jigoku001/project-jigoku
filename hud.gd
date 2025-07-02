@@ -6,7 +6,7 @@ var time_elapsed := 0.0
 var player 
 var death_counting = 00
 var g_death_counting = 00
-var COLLECTION_ID = "jigoku stats"
+#var COLLECTION_ID = "jigoku stats"
 
 
 @onready var timer_label = $HBoxContainer/MarginContainer/Timer
@@ -42,4 +42,4 @@ func add_death():
 #			"time" = time_elapsed,
 #			"deaths" = g_death_counting,
 #		}
-#		var task : FirestoreTask = collection.update(auth.localid,data)
+#		var task : FirestoreTask = collection.update(data)

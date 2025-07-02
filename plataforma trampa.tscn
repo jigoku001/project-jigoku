@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8l1kbqqv15ne"]
+[gd_scene load_steps=6 format=3 uid="uid://b8l1kbqqv15ne"]
 
 [ext_resource type="Script" uid="uid://ckve3a3dddbaf" path="res://plataforma_trampa.gd" id="1_o0a11"]
 [ext_resource type="Texture2D" uid="uid://dyqkgjcqr4myx" path="res://tileset/level tres.png" id="1_w5ux7"]
@@ -10,6 +10,9 @@ size = Vector2(47, 24)
 atlas = ExtResource("1_w5ux7")
 region = Rect2(160.289, 143.176, 46.281, 17.6432)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0a11"]
+size = Vector2(46, 6)
+
 [node name="Area2D" type="Area2D"]
 collision_mask = 16
 script = ExtResource("1_o0a11")
@@ -20,6 +23,10 @@ shape = SubResource("RectangleShape2D_hjxbo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_o0a11")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1, -4)
+shape = SubResource("RectangleShape2D_o0a11")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
