@@ -1,5 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://wp7toc0a0wdk"]
+[gd_scene load_steps=22 format=3 uid="uid://wp7toc0a0wdk"]
 
+[ext_resource type="PackedScene" uid="uid://h1nsdcuias63" path="res://nivel_audio.tscn" id="1_50uyw"]
 [ext_resource type="PackedScene" uid="uid://cdvapdluiisuc" path="res://hud.tscn" id="1_o46bk"]
 [ext_resource type="Texture2D" uid="uid://lbfe57ygm622" path="res://tileset/sripte 6 fase.png" id="2_j8syj"]
 [ext_resource type="Texture2D" uid="uid://dyqkgjcqr4myx" path="res://tileset/level tres.png" id="3_najtw"]
@@ -406,6 +407,8 @@ _data = {
 
 [node name="nivel2" type="Node2D"]
 
+[node name="nivel_audio" parent="." instance=ExtResource("1_50uyw")]
+
 [node name="HUD" parent="." instance=ExtResource("1_o46bk")]
 
 [node name="player" parent="." instance=ExtResource("4_2or2j")]
@@ -449,6 +452,7 @@ scale = Vector2(0.5, 0.5)
 
 [node name="portal" parent="." instance=ExtResource("8_lxwyk")]
 position = Vector2(3264, 1004)
+nivel = "res://nivel3.tscn"
 
 [node name="pinchos-animados" parent="." instance=ExtResource("9_vn1cb")]
 position = Vector2(1889, 990)

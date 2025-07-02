@@ -13,7 +13,9 @@ func _on_pressed() -> void:
 	
 	if easy == false:
 		Global.easy_mode = true
+		easy = true
 		$"../Label".text= "on"
 	elif easy == true:
 		Global.easy_mode = false
+		easy = false
 		$"../Label".text= "off"
