@@ -535,3 +535,4 @@ position = Vector2(6085, 559)
 [node name="portal" parent="." instance=ExtResource("11_jax03")]
 position = Vector2(6427, 542)
 nivel = "res://victoria.tscn"
+progres = 3

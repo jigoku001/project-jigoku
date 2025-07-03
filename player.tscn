@@ -16,6 +16,8 @@ var is_facing_right = true
 var player
 var checkpoint_manager 
 var deaths = 0
+signal save 
+
 
 func _ready() -> void:
 	
@@ -66,14 +68,24 @@ func _process(_delta):
 	#	body.call_deferred(\"die\")
 func die():
 	
+	Global.global_death += 1
 	if deaths < 9:
 		player.position = checkpoint_manager.last_location
 		deaths += 1
 		
 	else:
 		get_tree().change_scene_to_file(\"res://game_over.tscn\")
+		
+	$Timer.start()
 	
-	Global.global_death += 1
+
+	
+func saved():
+	emit_signal(\"save\")
+
+
+func _on_timer_timeout() -> void:
+	saved()
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hiqhm"]
@@ -335,7 +347,7 @@ animations = [{
 radius = 11.0
 height = 172.0
 
-[node name="player" type="CharacterBody2D" groups=["Player"]]
+[node name="player" type="CharacterBody2D" groups=["Player", "emisor"]]
 collision_layer = 16
 collision_mask = 3
 script = SubResource("GDScript_fnctx")
@@ -353,5 +365,12 @@ sprite_frames = SubResource("SpriteFrames_4flbx")
 animation = &"saltar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, -3)
+position = Vector2(-10, 15)
+scale = Vector2(1, 0.76)
 shape = SubResource("CapsuleShape2D_onrkg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

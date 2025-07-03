@@ -135,6 +135,8 @@ libraries = {
 }
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
 
 [connection signal="pressed" from="VBoxContainer/mainbtn" to="VBoxContainer/mainbtn" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/nvbtn" to="VBoxContainer/nvbtn" method="_on_pressed"]
@@ -144,3 +146,4 @@ libraries = {
 [connection signal="animation_finished" from="PixelArtResized1920x1080/AnimationPlayer" to="VBoxContainer/mainbtn" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="PixelArtResized1920x1080/AnimationPlayer" to="VBoxContainer/nvbtn" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="PixelArtResized1920x1080/AnimationPlayer" to="VBoxContainer/opbtn" method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Timer" to="VBoxContainer/mainbtn" method="_on_timer_timeout"]
