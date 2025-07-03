@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctoirhucpghou"]
+[gd_scene load_steps=3 format=3 uid="uid://ctoirhucpghou"]
 
 [ext_resource type="Texture2D" uid="uid://hgwlygfhm7e0" path="res://tileset/calaveras.jpg" id="1_okh8r"]
+[ext_resource type="AudioStream" uid="uid://bfxxm8cckwwy1" path="res://audios/files (online-audio-converter.com)/audio2.mp3" id="2_58qoj"]
 
 [node name="victoria" type="Node2D"]
 
 [node name="Calaveras" type="Sprite2D" parent="."]
 position = Vector2(564, 347)
 texture = ExtResource("1_okh8r")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_58qoj")
+autoplay = true
