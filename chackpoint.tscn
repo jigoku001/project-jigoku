@@ -1,19 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://do1gj12ka1joi"]
+[gd_scene load_steps=4 format=3 uid="uid://do1gj12ka1joi"]
 
 [ext_resource type="Script" uid="uid://bpj2cr0v2j3te" path="res://chackpoint.gd" id="1_myan2"]
+[ext_resource type="Texture2D" uid="uid://b8vbn0m3wx343" path="res://tileset/logo inicio2.png" id="2_3asyl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ov5rl"]
-size = Vector2(20, 163)
+size = Vector2(32, 45)
 
 [node name="checkPoint" type="Area2D"]
 collision_mask = 16
 script = ExtResource("1_myan2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -83)
+position = Vector2(7, -85.5)
 shape = SubResource("RectangleShape2D_ov5rl")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(14, -82)
+position = Vector2(6, -83)
+
+[node name="LogoInicio2" type="Sprite2D" parent="."]
+position = Vector2(6, -84)
+scale = Vector2(0.0539551, 0.0500488)
+texture = ExtResource("2_3asyl")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
