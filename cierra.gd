@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var speed = 200
+@export var speed = 300
 const RAY_FLOOR_POSITION = 20
 const RAY_WALL_DIRECTION = 20
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")

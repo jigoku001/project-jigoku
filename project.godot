@@ -10,13 +10,13 @@ config_version=5
 
 [application]
 
-config/name="jigoku_principal"
+config/name="jigoku"
 run/main_scene="uid://b21j7skus0fgl"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/bg_color=Color(0.241194, 0.0392072, 0.212422, 1)
 boot_splash/image="res://tileset/logo inicio2.png"
-config/icon="res://icon.svg"
-boot_splash/minimum_display_time=4000
+config/icon="uid://b8vbn0m3wx343"
+boot_splash/minimum_display_time=2000
 
 [autoload]
 
@@ -29,7 +29,6 @@ shapes/collision/draw_2d_outlines=false
 
 [display]
 
-window/size/mode=2
 window/stretch/mode="viewport"
 
 [editor_plugins]
@@ -40,6 +39,7 @@ enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg")
 
 Peligro=""
 Player=""
+emisor=""
 
 [gui]
 

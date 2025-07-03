@@ -50,14 +50,14 @@ const _AUTH_PROVIDERS : String = "firebase/auth_providers"
 # These values can be found in your Firebase Project
 # See the README checked Github for how to access
 var _config : Dictionary = {
-	"apiKey": "",
-	"authDomain": "",
+	"apiKey": "AIzaSyB9XUIyUOfcVPqVi3f0ODFPLgkP_smGeEA",
+	"authDomain": "jigoku-4d9a2.firebaseapp.com",
 	"databaseURL": "",
-	"projectId": "",
-	"storageBucket": "",
-	"messagingSenderId": "",
-	"appId": "",
-	"measurementId": "",
+	"projectId": "jigoku-4d9a2",
+	"storageBucket": "jigoku-4d9a2.firebasestorage.app",
+	"messagingSenderId": "201105336405",
+	"appId": "1:201105336405:web:0bcaf105ae2c18f22c4cdc",
+	"measurementId": "G-0L32NTNVV5",
 	"clientId": "",
 	"clientSecret" : "",
 	"domainUriPrefix" : "",

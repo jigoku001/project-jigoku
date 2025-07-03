@@ -130,12 +130,14 @@ script = ExtResource("4_3o3bh")
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_3o3bh")
+disabled = true
 text = "nivel 2"
 script = ExtResource("5_gcooo")
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_gcooo")
+disabled = true
 text = "nivel 3"
 script = ExtResource("6_gcooo")
 

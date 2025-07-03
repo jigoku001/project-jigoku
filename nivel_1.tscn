@@ -412,7 +412,7 @@ _data = {
 [node name="HUD" parent="." instance=ExtResource("1_o46bk")]
 
 [node name="player" parent="." instance=ExtResource("4_2or2j")]
-position = Vector2(-12, 206)
+position = Vector2(-9, 211)
 scale = Vector2(0.2, 0.2)
 move_speed = 200.0
 jump_speed = 285.0
@@ -453,6 +453,7 @@ scale = Vector2(0.5, 0.5)
 [node name="portal" parent="." instance=ExtResource("8_lxwyk")]
 position = Vector2(3264, 1004)
 nivel = "res://nivel3.tscn"
+progres = 3
 
 [node name="pinchos-animados" parent="." instance=ExtResource("9_vn1cb")]
 position = Vector2(1889, 990)
@@ -468,7 +469,6 @@ scale = Vector2(0.7, 0.7)
 
 [node name="cierra5" parent="." instance=ExtResource("6_wjy5v")]
 position = Vector2(277, 221)
-speed = 300
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(1409, 780)
@@ -493,7 +493,7 @@ position = Vector2(1781, 1020)
 [node name="game_controller" parent="." instance=ExtResource("12_o46bk")]
 
 [node name="checkPoint" parent="." instance=ExtResource("12_j8syj")]
-position = Vector2(341, 345)
+position = Vector2(360, 347)
 
 [node name="checkPoint2" parent="." instance=ExtResource("12_j8syj")]
 position = Vector2(1728, 721)

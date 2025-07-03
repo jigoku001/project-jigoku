@@ -3,7 +3,6 @@ extends Button
 
 @export var level_proyect_dir2: String = "res://level_2.tscn"
 
-
 func _on_pressed():
 	$"../../PixelArtResized1920x1080/AnimationPlayer".play("inicio")
 		

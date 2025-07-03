@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=4 uid="uid://c5fwpgy4ngwgl"]
 
-[ext_resource type="Script" path="res://level_2.gd" id="1_15wb7"]
+[ext_resource type="Script" uid="uid://b3jfrc6f8sobv" path="res://level_2.gd" id="1_15wb7"]
 [ext_resource type="Texture2D" uid="uid://dyqkgjcqr4myx" path="res://tileset/level tres.png" id="1_xdadj"]
 [ext_resource type="PackedScene" uid="uid://b15bhta7aj48n" path="res://player.tscn" id="2_nmjpi"]
 [ext_resource type="PackedScene" uid="uid://h1nsdcuias63" path="res://nivel_audio.tscn" id="2_s77qv"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cfyh4c3pq5r2c" path="res://cierra.tscn" id="6_0s5r2"]
 [ext_resource type="PackedScene" uid="uid://cmxdmcwtgw30q" path="res://electricity_2.tscn" id="7_7j8ne"]
 [ext_resource type="PackedScene" uid="uid://bmh4rnidg7p2r" path="res://movin_platform_2.tscn" id="8_7dov7"]
-[ext_resource type="Script" path="res://plataformas.gd" id="8_ehv2h"]
+[ext_resource type="Script" uid="uid://wmleyo6s2m5o" path="res://plataformas.gd" id="8_ehv2h"]
 [ext_resource type="PackedScene" uid="uid://qifre4y7yngy" path="res://game_controller.tscn" id="11_eoq84"]
 [ext_resource type="PackedScene" uid="uid://cdvapdluiisuc" path="res://hud.tscn" id="12_yl73a"]
 [ext_resource type="PackedScene" uid="uid://bqoc6vqmy1w8r" path="res://portal.tscn" id="13_xbcdb"]
@@ -400,7 +400,6 @@ position = Vector2(283, 633)
 
 [node name="cierra4" parent="trampas" instance=ExtResource("6_0s5r2")]
 position = Vector2(518, 38)
-speed = 300
 
 [node name="cierra5" parent="trampas" instance=ExtResource("6_0s5r2")]
 position = Vector2(1083, 345)

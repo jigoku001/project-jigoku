@@ -6,18 +6,24 @@ var time_elapsed := 0.0
 var player 
 var death_counting = 00
 var g_death_counting = 00
-#var COLLECTION_ID = "jigoku stats"
-
+var COLLECTION_ID = "jigoku_stats"
+var nivel = ''
+var progress = Global.progress
 
 @onready var timer_label = $HBoxContainer/MarginContainer/Timer
 @onready var death_label = $HBoxContainer/MarginContainer2/Deathcounter
 @onready var g_death_label = $HBoxContainer/MarginContainer2/Deathcounter2
-
 func _ready():
+	nivel = get_tree().current_scene.scene_file_path
+	Global.current_level = nivel
+	print(nivel)
 	player = get_parent().get_node("player")
+	get_tree().get_first_node_in_group("emisor").connect("save", save_to_cloud)
+	
 
 func _process(delta):
 	add_death()
+	
 	if Global.global_time > 0:
 		time_elapsed = Global.global_time
 		
@@ -31,46 +37,41 @@ func add_death():
 	g_death_counting = Global.global_death
 	death_label.text = "💀 Muertes: %d" % death_counting
 	g_death_label.text = "💀 g: %d" % g_death_counting
+
 	
-#func save_data():
-#	var auth = Firebase.Auth.auth
-#	if auth and auth.localid:
-#		
-#		var collection : FirestoreCollection = Firebase.Firestore.collection(COLLECTION_ID)
-#		var data : Dictionary = {
-#			"jigoku_name" = "test",
-#			"time" = time_elapsed,
-#			"deaths" = g_death_counting,
-#		}
-<<<<<<< HEAD
-#		var task : FirestoreTask = collection.update(auth.localid,data)
+	
 func save_to_cloud():
 	
 	var data = {
-		"data_1" : 1,
-		"data_2": 2
+			"deaths" : g_death_counting,
+			"time": time_elapsed,
+			"nivel": nivel,
+			"progress" : progress
 	}
-
+	print("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+	print(data)
 	var auth = Firebase.Auth.auth
 	if auth.localid:
 		var collection: FirestoreCollection = Firebase.Firestore.collection(COLLECTION_ID)
-		var task = await collection.get_doc(auth.localid)
+		var task : FirestoreDocument = await collection.get_doc(auth.localid)		
+		
 		if task:
-			await collection.update(FirestoreDocument.new(data))
+			print(task)
+			print("-------------------------")
+			task.add_or_update_field("fields",data)
+			#var new := FirestoreDocument.new(data)
+			print(task)
+			var saved := await collection.update(task)
+
 		else:
-			await collection.add(auth.localid, data)
-
-func load_from_cloud():
-	var auth = Firebase.Auth.auth
-	if auth.localid:
-		var collection: FirestoreCollection = Firebase.Firestore.collection(COLLECTION_ID)
-		var task = await collection.get_doc(auth.localid)
-		var result = task.get_value("fields")
-		print(result)
-
-
-func _on_button_pressed() -> void:
-	save_to_cloud()
-=======
-#		var task : FirestoreTask = collection.update(data)
->>>>>>> 09a350ad08050cd29c521e949f123ebb72c9814b
+			var data1 = {
+				"fields":{
+					"deaths" : g_death_counting,
+					"time": time_elapsed,
+					"nivel": nivel,
+					"progress" : progress
+				}
+			}
+			print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+			print(data1)
+			await collection.add(auth.localid,data1)
