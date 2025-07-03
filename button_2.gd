@@ -1,11 +1,13 @@
 extends Button
 
-@export var level_int: int = 2
 @export var level_proyect_dir1: String = "res://nivel_1.tscn"
 
+var status = Global.progress
 
-#func _ready() -> void:
-#		pass
+func _ready() -> void:
+	
+	if status >= 2  :
+		$".".disabled = false 
 
 func _on_pressed():
 	$"../../PixelArtResized1920x1080/AnimationPlayer".play("nivel2")
