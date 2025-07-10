@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://50f4yqppt2ek"]
+
+[sub_resource type="Resource" id="Resource_0jah6"]
+metadata/__load_path__ = "res://calaveras.jpg"
+
+[sub_resource type="Resource" id="Resource_ht70u"]
+metadata/__load_path__ = "res://Attack.png"
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/CharacterBody2D"]
+texture_filter = 1
+position = Vector2(577, 321)
+scale = Vector2(0.778741, 0.759012)
+texture = SubResource("Resource_0jah6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/CharacterBody2D"]
+texture_filter = 1
+position = Vector2(362, 177)
+scale = Vector2(1.89383, 2.58008)
+texture = SubResource("Resource_ht70u")
+hframes = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/CharacterBody2D/Sprite2D2"]

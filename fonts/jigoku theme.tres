@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 [gd_resource type="Theme" load_steps=11 format=3 uid="uid://dqwwqtp1cview"]
+=======
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://dqwwqtp1cview"]
+>>>>>>> 01f9b2780bafb02f0eef50339f40e79d3ea4d92b
 
 [ext_resource type="Texture2D" uid="uid://b6cl0odq4iegl" path="res://tileset/botones .png" id="1_kqxwq"]
 [ext_resource type="FontFile" uid="uid://bvn5ob0rrobqr" path="res://fonts/PressStart2P-Regular.ttf" id="2_hjlco"]
 
+<<<<<<< HEAD
 [sub_resource type="AtlasTexture" id="AtlasTexture_hjlco"]
 atlas = ExtResource("1_kqxwq")
 region = Rect2(900.979, 0.523674, 445.202, 93.7591)
@@ -15,6 +20,8 @@ texture_margin_right = 40.0
 texture_margin_bottom = 40.0
 modulate_color = Color(0.140447, 0.140447, 0.140447, 1)
 
+=======
+>>>>>>> 01f9b2780bafb02f0eef50339f40e79d3ea4d92b
 [sub_resource type="AtlasTexture" id="AtlasTexture_3733b"]
 atlas = ExtResource("1_kqxwq")
 region = Rect2(455.5, -4, 446, 100)
@@ -55,7 +62,10 @@ Button/colors/font_pressed_color = Color(1, 0.4, 0, 1)
 Button/constants/align_to_largest_stylebox = 0
 Button/font_sizes/font_size = 18
 Button/fonts/font = ExtResource("2_hjlco")
+<<<<<<< HEAD
 Button/styles/disabled = SubResource("StyleBoxTexture_koq7c")
+=======
+>>>>>>> 01f9b2780bafb02f0eef50339f40e79d3ea4d92b
 Button/styles/hover = SubResource("StyleBoxTexture_yma42")
 Button/styles/normal = SubResource("StyleBoxTexture_hjlco")
 Button/styles/pressed = SubResource("StyleBoxTexture_uq60g")

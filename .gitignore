@@ -1,6 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+<<<<<<< HEAD
 /builds/
+=======
+>>>>>>> 01f9b2780bafb02f0eef50339f40e79d3ea4d92b
 /addons/godot-sqlite/
 /character/luis/

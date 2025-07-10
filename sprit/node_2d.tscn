@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bx88y1adcneb7"]
+
+[ext_resource type="Script" uid="uid://clabk7t4f01jc" path="res://sprit/victoria1.gd" id="1_i177k"]
+
+[sub_resource type="Resource" id="Resource_37sp1"]
+metadata/__load_path__ = "res://Attack.png"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpkdy"]
+size = Vector2(80, 92)
+
+[node name="player" type="Node2D"]
+scale = Vector2(1.01588, 1.00171)
+script = ExtResource("1_i177k")
+gravity = null
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(197, 113)
+texture = SubResource("Resource_37sp1")
+hframes = 8
+frame = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(202, 133)
+shape = SubResource("RectangleShape2D_tpkdy")
